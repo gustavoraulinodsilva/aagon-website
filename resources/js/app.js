@@ -1,3 +1,5 @@
+import './pages/home';
+
 function init() {
     initHeader();
 }

@@ -1,7 +1,6 @@
 @php
     $navItems = [
-        ['label' => 'Home', 'href' => '#'],
-        ['label' => 'Sobre', 'href' => '#'],
+        ['label' => 'Sobre', 'href' => 'about'],
         ['label' => 'Servicos', 'href' => '#'],
         ['label' => 'Projetos', 'href' => '#'],
         ['label' => 'Equipe', 'href' => '#'],
@@ -11,7 +10,7 @@
 
 <header class="sticky top-0 z-50 border-b border-transparent bg-transparent backdrop-blur-xl transition-all duration-300 data-[scrolled=true]:border-cyan-950/50 data-[scrolled=true]:bg-slate-950/85" data-main-header data-scrolled="false">
     <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-4 md:px-8">
-        <a href="#" class="group inline-flex items-center gap-3" aria-label="Aagon">
+        <a href="/" class="group inline-flex items-center gap-3" aria-label="Aagon">
             <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/10 text-xs font-bold tracking-[0.18em] text-cyan-300 transition group-hover:border-cyan-300 group-hover:text-cyan-200">
                 AG
             </span>

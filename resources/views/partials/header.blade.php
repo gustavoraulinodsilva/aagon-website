@@ -9,7 +9,7 @@
     ];
 @endphp
 
-<header class="sticky top-0 z-50 border-b border-cyan-950/50 bg-slate-950/85 backdrop-blur-xl">
+<header class="sticky top-0 z-50 border-b border-transparent bg-transparent backdrop-blur-xl transition-all duration-300 data-[scrolled=true]:border-cyan-950/50 data-[scrolled=true]:bg-slate-950/85" data-main-header data-scrolled="false">
     <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-4 md:px-8">
         <a href="#" class="group inline-flex items-center gap-3" aria-label="Aagon">
             <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/10 text-xs font-bold tracking-[0.18em] text-cyan-300 transition group-hover:border-cyan-300 group-hover:text-cyan-200">
@@ -21,6 +21,14 @@
                 <p class="text-[10px] uppercase tracking-[0.26em] text-slate-400">Digital Engineering</p>
             </div>
         </a>
+
+        <nav class="hidden flex-1 justify-center gap-3 overflow-x-auto px-6 text-xs font-medium uppercase tracking-[0.16em] text-slate-300 md:flex" aria-label="Navegacao principal">
+            @foreach ($navItems as $item)
+                <a href="{{ $item['href'] }}" class="whitespace-nowrap rounded-full border border-transparent px-3 py-1.5 transition hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-100">
+                    {{ $item['label'] }}
+                </a>
+            @endforeach
+        </nav>
 
         <button
             type="button"
@@ -36,24 +44,11 @@
             </svg>
         </button>
 
-        <div class="hidden items-center gap-3 md:flex">
-            <span class="rounded-full border border-amber-300/30 bg-amber-300/10 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.2em] text-amber-100">
-                Estudio 2026
-            </span>
+        <div class="hidden items-center md:flex">
             <a href="#" class="rounded-full border border-cyan-300/40 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-100 transition hover:border-cyan-200 hover:bg-cyan-300/10 hover:text-cyan-50">
                 Iniciar projeto
             </a>
         </div>
-    </div>
-
-    <div class="hidden border-t border-cyan-950/40 bg-slate-950/40 md:block">
-        <nav class="mx-auto flex w-full max-w-7xl gap-3 overflow-x-auto px-5 py-3 text-xs font-medium uppercase tracking-[0.16em] text-slate-300 md:px-8" aria-label="Navegacao principal">
-            @foreach ($navItems as $item)
-                <a href="{{ $item['href'] }}" class="whitespace-nowrap rounded-full border border-transparent px-3 py-1.5 transition hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-100">
-                    {{ $item['label'] }}
-                </a>
-            @endforeach
-        </nav>
     </div>
 </header>
 
@@ -91,55 +86,3 @@
         Iniciar projeto
     </a>
 </aside>
-
-<script>
-    (() => {
-        const toggle = document.querySelector('[data-mobile-menu-toggle]');
-        const panel = document.querySelector('[data-mobile-menu-panel]');
-        const overlay = document.querySelector('[data-mobile-menu-overlay]');
-        const closeButton = document.querySelector('[data-mobile-menu-close]');
-
-        if (!toggle || !panel || !overlay || !closeButton) return;
-
-        const openMenu = () => {
-            toggle.setAttribute('aria-expanded', 'true');
-            panel.setAttribute('aria-hidden', 'false');
-            panel.classList.remove('translate-x-full');
-            overlay.classList.remove('hidden');
-            document.body.classList.add('overflow-hidden');
-        };
-
-        const closeMenu = () => {
-            toggle.setAttribute('aria-expanded', 'false');
-            panel.setAttribute('aria-hidden', 'true');
-            panel.classList.add('translate-x-full');
-            overlay.classList.add('hidden');
-            document.body.classList.remove('overflow-hidden');
-        };
-
-        toggle.addEventListener('click', () => {
-            const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-            if (isExpanded) {
-                closeMenu();
-                return;
-            }
-
-            openMenu();
-        });
-
-        closeButton.addEventListener('click', closeMenu);
-        overlay.addEventListener('click', closeMenu);
-
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
-                closeMenu();
-            }
-        });
-
-        window.addEventListener('resize', () => {
-            if (window.innerWidth >= 768) {
-                closeMenu();
-            }
-        });
-    })();
-</script>

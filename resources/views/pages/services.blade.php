@@ -50,7 +50,7 @@
                             <p class="mt-3 text-sm leading-relaxed text-slate-400">Descrição resumida da solução focada em resolver desafios operacionais complexos.</p>
                         </div>
                         <div class="mt-8 pt-4">
-                            <a href="#" class="inline-flex items-center text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200 transition group-hover:text-cyan-100">
+                            <a href="{{ route('services.details', ['slug' => 'noticia-2']) }}" class="inline-flex items-center text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200 transition group-hover:text-cyan-100">
                                 Saiba mais <span class="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
                             </a>
                         </div>

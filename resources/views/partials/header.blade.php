@@ -1,7 +1,7 @@
 @php
     $navItems = [
         ['label' => 'Sobre', 'href' => 'sobre-nos'],
-        ['label' => 'Servicos', 'href' => '#'],
+        ['label' => 'Servicos', 'href' => 'servicos'],
         ['label' => 'Projetos', 'href' => '#'],
         ['label' => 'Equipe', 'href' => '#'],
         ['label' => 'Contato', 'href' => '#'],

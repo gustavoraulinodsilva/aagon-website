@@ -3,8 +3,8 @@
         ['label' => 'Sobre', 'href' => 'sobre-nos'],
         ['label' => 'Servicos', 'href' => 'servicos'],
         ['label' => 'Projetos', 'href' => 'projetos'],
-        ['label' => 'Equipe', 'href' => '#'],
-        ['label' => 'Contato', 'href' => '#'],
+        ['label' => 'Equipe', 'href' => 'equipe'],
+        ['label' => 'Contato', 'href' => 'contato'],
     ];
 @endphp
 

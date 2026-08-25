@@ -66,8 +66,6 @@
                 @endfor
             </div>
         </section>
-
-        {{-- SEÇÃO CURTA DE CULTURA --}}
         <section class="mx-auto mt-24 max-w-7xl px-6 md:px-8">
             <div class="rounded-3xl border border-cyan-900/30 bg-slate-900/70 p-8 text-center md:p-12">
                 <p class="reveal text-xs font-semibold uppercase tracking-[0.22em] text-amber-100 opacity-0 transition duration-700" data-reveal>
@@ -78,8 +76,6 @@
                 </p>
             </div>
         </section>
-
-        {{-- CTA --}}
         <section class="mx-auto mt-24 max-w-7xl px-6 md:px-8">
             <div class="reveal overflow-hidden rounded-3xl border border-cyan-300/30 bg-[linear-gradient(120deg,rgba(34,211,238,0.16),rgba(15,23,42,0.9)_50%,rgba(245,158,11,0.12))] p-8 opacity-0 transition duration-700 md:p-12" data-reveal>
                 <p class="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-100">Conecte-se conosco</p>

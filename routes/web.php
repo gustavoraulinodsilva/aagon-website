@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\ServicesDetailsController;
@@ -16,3 +17,4 @@ Route::get('/servicos/{slug}', [ServicesDetailsController::class, 'index'])->nam
 Route::get('/projetos', [ProjectsController::class, 'index'])->name('projects');
 Route::get('/projetos/{slug}', [ProjectsDetailsController::class, 'index'])->name('projects.details');
 Route::get('/equipe', [TeamController::class, 'index'])->name('team');
+Route::get('/contato', [ContactController::class, 'index'])->name('contact');

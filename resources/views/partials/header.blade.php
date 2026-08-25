@@ -35,7 +35,7 @@
                 Equipe
             </a>
 
-            <a href="#"
+            <a href="{{ route('contact') }}"
                 class="whitespace-nowrap rounded-full border border-transparent px-3 py-1.5 transition hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-100">
                 Contato
             </a>
@@ -97,7 +97,7 @@
             Equipe
         </a>
 
-        <a href="#"
+        <a href="{{ route('contact') }}"
             class="rounded-lg border border-transparent px-3 py-2.5 text-sm font-medium uppercase tracking-[0.12em] text-slate-200 transition hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-100">
             Contato
         </a>

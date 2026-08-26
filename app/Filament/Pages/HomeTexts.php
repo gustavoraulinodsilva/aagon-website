@@ -32,7 +32,7 @@ class HomeTexts extends Page implements HasForms
 
     protected static ?string $navigationLabel = 'Home - Textos';
 
-    protected static ?string $title = 'Conteúdo da Home';
+    protected static ?string $title = 'Conteúdo da Página Inicial';
 
     protected static string | BackedEnum | null $navigationIcon = Heroicon::Home;
 
@@ -206,22 +206,32 @@ class HomeTexts extends Page implements HasForms
                             ->schema([
                                 Toggle::make('show_philosophy')
                                     ->label('Exibir Filosofia da Empresa')
+                                    ->onColor('success')
+                                    ->offColor('danger')
                                     ->default(true),
 
                                 Toggle::make('show_methodology')
                                     ->label('Exibir Metodologia')
+                                    ->onColor('success')
+                                    ->offColor('danger')
                                     ->default(true),
 
                                 Toggle::make('show_services')
                                     ->label('Exibir Serviços')
+                                    ->onColor('success')
+                                    ->offColor('danger')
                                     ->default(true),
 
                                 Toggle::make('show_about')
                                     ->label('Exibir Sobre a AAGON')
+                                    ->onColor('success')
+                                    ->offColor('danger')
                                     ->default(true),
 
                                 Toggle::make('show_cta')
                                     ->label('Exibir CTA')
+                                    ->onColor('success')
+                                    ->offColor('danger')
                                     ->default(true),
                             ])
                             ->columns(2),

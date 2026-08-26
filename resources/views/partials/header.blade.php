@@ -1,110 +1,114 @@
 <header
-    class="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-transparent backdrop-blur-xl transition-all duration-300 data-[scrolled=true]:border-cyan-950/50 data-[scrolled=true]:bg-slate-950/85"
+    class="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-transparent backdrop-blur-md transition-all duration-300 data-[scrolled=true]:border-[#2D2D2D] data-[scrolled=true]:bg-[#121212]/90"
     data-main-header data-scrolled="false">
-    <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-4 md:px-8">
-        <a href="{{ route('home') }}" class="group inline-flex items-center gap-3" aria-label="Aagon">
-            <span
-                class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-400/30 bg-cyan-400/10 text-xs font-bold tracking-[0.18em] text-cyan-300 transition group-hover:border-cyan-300 group-hover:text-cyan-200">
-                AG
-            </span>
-
-            <div class="leading-tight">
-                <p class="text-base font-semibold tracking-[0.3em] text-slate-50 md:text-lg">AAGON</p>
-                <p class="text-[10px] uppercase tracking-[0.26em] text-slate-400">Digital Engineering</p>
+    <div class="mx-auto flex h-20 w-full max-w-360 items-center justify-between px-6 md:px-16">
+        <a href="{{ route('home') }}" class="group inline-flex items-center" aria-label="Aagon">
+            <div class="text-2xl font-bold tracking-tighter text-[#F5F5F5] transition group-hover:text-[#0055FF]">
+                AAGON
             </div>
         </a>
-        <nav class="hidden flex-1 justify-center gap-3 overflow-x-auto px-6 text-xs font-medium uppercase tracking-[0.16em] text-slate-300 md:flex"
-            aria-label="Navegacao principal">
+        <nav class="hidden flex-1 justify-center gap-8 text-sm font-medium text-[#A1A1AA] md:flex"
+            aria-label="Navegação principal">
+            <a href="{{ route('home') }}"
+                class="transition hover:text-[#F5F5F5] {{ request()->routeIs('home') ? 'border-b-2 border-[#0055FF] pb-1 font-bold text-[#0055FF]' : '' }}">
+                Home
+            </a>
+
             <a href="{{ route('about') }}"
-                class="whitespace-nowrap rounded-full border border-transparent px-3 py-1.5 transition hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-100 {{ request()->routeIs('about') ? 'border-cyan-300/40 bg-cyan-300/10 text-cyan-100' : '' }}">
-                Sobre
+                class="transition hover:text-[#F5F5F5] {{ request()->routeIs('about') ? 'border-b-2 border-[#0055FF] pb-1 font-bold text-[#0055FF]' : '' }}">
+                About
             </a>
 
             <a href="{{ route('services') }}"
-                class="whitespace-nowrap rounded-full border border-transparent px-3 py-1.5 transition hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-100 {{ request()->routeIs('services.*') ? 'border-cyan-300/40 bg-cyan-300/10 text-cyan-100' : '' }}">
-                Serviços
+                class="transition hover:text-[#F5F5F5] {{ request()->routeIs('services') ? 'border-b-2 border-[#0055FF] pb-1 font-bold text-[#0055FF]' : '' }}">
+                Services
             </a>
 
             <a href="{{ route('projects') }}"
-                class="whitespace-nowrap rounded-full border border-transparent px-3 py-1.5 transition hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-100 {{ request()->routeIs('projects.*') ? 'border-cyan-300/40 bg-cyan-300/10 text-cyan-100' : '' }}">
-                Projetos
+                class="transition hover:text-[#F5F5F5] {{ request()->routeIs('projects') ? 'border-b-2 border-[#0055FF] pb-1 font-bold text-[#0055FF]' : '' }}">
+                Projects
             </a>
 
             <a href="{{ route('team') }}"
-                class="whitespace-nowrap rounded-full border border-transparent px-3 py-1.5 transition hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-100 {{ request()->routeIs('team') ? 'border-cyan-300/40 bg-cyan-300/10 text-cyan-100' : '' }}">
-                Equipe
+                class="transition hover:text-[#F5F5F5] {{ request()->routeIs('team') ? 'border-b-2 border-[#0055FF] pb-1 font-bold text-[#0055FF]' : '' }}">
+                Team
             </a>
 
             <a href="{{ route('contact') }}"
-                class="whitespace-nowrap rounded-full border border-transparent px-3 py-1.5 transition hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-100">
-                Contato
+                class="transition hover:text-[#F5F5F5] {{ request()->routeIs('contact') ? 'border-b-2 border-[#0055FF] pb-1 font-bold text-[#0055FF]' : '' }}">
+                Contact
             </a>
         </nav>
-
+        <div class="hidden items-center md:flex">
+            <a href="{{ route('contact') }}"
+                class="rounded bg-[#0055FF] px-6 py-3 font-mono text-xs font-medium uppercase tracking-wider text-white transition hover:bg-opacity-90 active:scale-95">
+                Start a conversation
+            </a>
+        </div>
         <button type="button"
-            class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-cyan-300/30 bg-cyan-300/10 text-cyan-100 transition hover:border-cyan-200 hover:bg-cyan-300/20 md:hidden"
+            class="inline-flex h-10 w-10 items-center justify-center rounded border border-[#2D2D2D] bg-[#1A1A1A] text-[#F5F5F5] transition hover:border-[#0055FF] hover:text-[#0055FF] md:hidden"
             aria-label="Abrir menu" aria-controls="mobile-side-menu" aria-expanded="false" data-mobile-menu-toggle>
-            <span class="sr-only">Abrir menu</span>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                stroke="currentColor" stroke-width="1.8">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
         </button>
-
-        <div class="hidden items-center md:flex">
-            <a href="#"
-                class="rounded-full border border-cyan-300/40 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-100 transition hover:border-cyan-200 hover:bg-cyan-300/10 hover:text-cyan-50">
-                Iniciar projeto
-            </a>
-        </div>
     </div>
 </header>
 
-<div class="fixed inset-0 z-40 hidden bg-slate-950/70 backdrop-blur-sm md:hidden" data-mobile-menu-overlay></div>
-
+<div class="fixed inset-0 z-40 hidden bg-[#121212]/80 backdrop-blur-sm md:hidden" data-mobile-menu-overlay></div>
 <aside id="mobile-side-menu"
-    class="fixed right-0 top-0 z-50 flex h-dvh w-80 max-w-[86vw] translate-x-full flex-col border-l border-cyan-900/50 bg-slate-950 px-5 py-5 transition-transform duration-300 ease-out md:hidden"
+    class="fixed right-0 top-0 z-50 flex h-dvh w-80 max-w-[85vw] translate-x-full flex-col border-l border-[#2D2D2D] bg-[#121212] px-6 py-6 transition-transform duration-300 ease-out md:hidden"
     aria-hidden="true" data-mobile-menu-panel>
-    <div class="mb-6 flex items-center justify-between">
-        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-100">Menu</p>
+
+    <div class="mb-8 flex items-center justify-between border-b border-[#2D2D2D] pb-4">
+        <p class="font-mono text-xs font-semibold uppercase tracking-widest text-[#0055FF]">Menu</p>
         <button type="button"
-            class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-300/30 bg-cyan-300/10 text-cyan-100 transition hover:border-cyan-200 hover:bg-cyan-300/20"
+            class="inline-flex h-9 w-9 items-center justify-center rounded border border-[#2D2D2D] bg-[#1A1A1A] text-[#F5F5F5] transition hover:border-[#0055FF] hover:text-[#0055FF]"
             aria-label="Fechar menu" data-mobile-menu-close>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
         </button>
     </div>
-    <nav class="flex flex-col gap-2" aria-label="Navegacao principal mobile">
+
+    <nav class="flex flex-col gap-3 font-body-md text-sm text-[#A1A1AA]" aria-label="Navegação principal mobile">
+        <a href="{{ route('home') }}"
+            class="rounded px-3 py-2 transition hover:bg-[#1A1A1A] hover:text-[#F5F5F5] {{ request()->routeIs('home') ? 'bg-[#1A1A1A] font-bold text-[#0055FF]' : '' }}">
+            Home
+        </a>
+
         <a href="{{ route('about') }}"
-            class="rounded-lg border border-transparent px-3 py-2.5 text-sm font-medium uppercase tracking-[0.12em] text-slate-200 transition hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-100 {{ request()->routeIs('about') ? 'border-cyan-300/40 bg-cyan-300/10 text-cyan-100' : '' }}">
-            Sobre
+            class="rounded px-3 py-2 transition hover:bg-[#1A1A1A] hover:text-[#F5F5F5] {{ request()->routeIs('about') ? 'bg-[#1A1A1A] font-bold text-[#0055FF]' : '' }}">
+            About
         </a>
 
         <a href="{{ route('services') }}"
-            class="rounded-lg border border-transparent px-3 py-2.5 text-sm font-medium uppercase tracking-[0.12em] text-slate-200 transition hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-100 {{ request()->routeIs('services.*') ? 'border-cyan-300/40 bg-cyan-300/10 text-cyan-100' : '' }}">
-            Serviços
+            class="rounded px-3 py-2 transition hover:bg-[#1A1A1A] hover:text-[#F5F5F5] {{ request()->routeIs('services.*') ? 'bg-[#1A1A1A] font-bold text-[#0055FF]' : '' }}">
+            Services
         </a>
 
         <a href="{{ route('projects') }}"
-            class="rounded-lg border border-transparent px-3 py-2.5 text-sm font-medium uppercase tracking-[0.12em] text-slate-200 transition hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-100 {{ request()->routeIs('projects.*') ? 'border-cyan-300/40 bg-cyan-300/10 text-cyan-100' : '' }}">
-            Projetos
+            class="rounded px-3 py-2 transition hover:bg-[#1A1A1A] hover:text-[#F5F5F5] {{ request()->routeIs('projects.*') ? 'bg-[#1A1A1A] font-bold text-[#0055FF]' : '' }}">
+            Projects
         </a>
 
         <a href="{{ route('team') }}"
-            class="rounded-lg border border-transparent px-3 py-2.5 text-sm font-medium uppercase tracking-[0.12em] text-slate-200 transition hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-100 {{ request()->routeIs('team') ? 'border-cyan-300/40 bg-cyan-300/10 text-cyan-100' : '' }}">
-            Equipe
+            class="rounded px-3 py-2 transition hover:bg-[#1A1A1A] hover:text-[#F5F5F5] {{ request()->routeIs('team') ? 'bg-[#1A1A1A] font-bold text-[#0055FF]' : '' }}">
+            Team
         </a>
 
         <a href="{{ route('contact') }}"
-            class="rounded-lg border border-transparent px-3 py-2.5 text-sm font-medium uppercase tracking-[0.12em] text-slate-200 transition hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-100">
-            Contato
+            class="rounded px-3 py-2 transition hover:bg-[#1A1A1A] hover:text-[#F5F5F5] {{ request()->routeIs('contact') ? 'bg-[#1A1A1A] font-bold text-[#0055FF]' : '' }}">
+            Contact
         </a>
     </nav>
 
-    <a href="#"
-        class="mt-6 inline-flex w-full items-center justify-center rounded-full border border-cyan-300/40 px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-100 transition hover:border-cyan-200 hover:bg-cyan-300/10 hover:text-cyan-50">
-        Iniciar projeto
-    </a>
+    <div class="mt-auto pt-6 border-t border-[#2D2D2D]">
+        <a href="{{ route('contact') }}"
+            class="inline-flex w-full items-center justify-center rounded bg-[#0055FF] px-4 py-3 font-mono text-xs font-medium uppercase tracking-wider text-white transition hover:bg-opacity-90">
+            Start a conversation
+        </a>
+    </div>
 </aside>

@@ -1,72 +1,66 @@
-@php
-    $quickLinks = [
-        ['label' => 'Sobre', 'href' => '#'],
-        ['label' => 'Servicos', 'href' => '#'],
-        ['label' => 'Projetos', 'href' => '#'],
-        ['label' => 'Equipe', 'href' => '#'],
-        ['label' => 'Contato', 'href' => '#'],
-    ];
-
-    $contactInfo = [
-        'contato@aagon.com',
-        '+55 11 0000-0000',
-        'Sao Paulo, Brasil',
-    ];
-@endphp
-
-<footer class="relative overflow-hidden border-t border-cyan-950/50 bg-slate-950 text-slate-300">
-    <div class="pointer-events-none absolute -left-20 top-0 h-56 w-56 rounded-full bg-cyan-500/10 blur-3xl"></div>
-    <div class="pointer-events-none absolute -right-16 bottom-0 h-52 w-52 rounded-full bg-amber-400/10 blur-3xl"></div>
-
-    <div class="relative mx-auto grid w-full max-w-7xl gap-10 px-5 py-12 md:grid-cols-3 md:px-8">
-        <section class="space-y-4 text-center md:text-left">
-            <p class="text-[11px] uppercase tracking-[0.24em] text-cyan-200">Aagon</p>
-            <h2 class="mx-auto max-w-xs text-2xl font-semibold leading-tight text-slate-50 md:mx-0">
-                Tecnologia que transforma complexidade em solucao.
-            </h2>
-            <p class="mx-auto max-w-sm text-sm leading-relaxed text-slate-400 md:mx-0">
-                Construimos produtos e plataformas digitais sob medida para empresas em crescimento.
-            </p>
-        </section>
-
-        <section class="text-center md:text-left">
-            <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-100">Navegacao</h3>
-            <ul class="mt-4 space-y-1 text-sm text-slate-300">
-                @foreach ($quickLinks as $link)
+<footer class="w-full border-t border-[#2D2D2D] bg-[#121212] pt-16 pb-12 text-[#A1A1AA]">
+    <div class="mx-auto max-w-360 px-6 md:px-16">
+        <div class="grid grid-cols-12 gap-y-10 md:gap-8">
+            <div class="col-span-12 md:col-span-4 space-y-4">
+                <div class="text-2xl font-bold tracking-tighter text-[#F5F5F5]">AAGON</div>
+                <p class="text-sm max-w-sm leading-relaxed text-[#A1A1AA]">
+                    Technology built to solve real problems.
+                </p>
+            </div>
+            <div class="col-span-6 md:col-span-2 space-y-4">
+                <div class="font-mono text-xs uppercase tracking-wider text-[#F5F5F5] border-b border-[#2D2D2D] pb-2">
+                    Sitemap
+                </div>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a href="{{ route('about') }}" class="hover:text-[#0055FF] transition-colors">About</a></li>
+                    <li><a href="{{ route('services') }}" class="hover:text-[#0055FF] transition-colors">Services</a></li>
+                    <li><a href="{{ route('projects') }}" class="hover:text-[#0055FF] transition-colors">Projects</a></li>
+                    <li><a href="{{ route('team') }}" class="hover:text-[#0055FF] transition-colors">Team</a></li>
+                    <li><a href="{{ route('contact') }}" class="hover:text-[#0055FF] transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-span-6 md:col-span-3 space-y-4">
+                <div class="font-mono text-xs uppercase tracking-wider text-[#F5F5F5] border-b border-[#2D2D2D] pb-2">
+                    Inquiries
+                </div>
+                <ul class="space-y-2.5 text-sm">
                     <li>
-                        <a href="{{ $link['href'] }}" class="inline-flex rounded-md px-2 py-1.5 transition hover:bg-cyan-300/10 hover:text-cyan-200">
-                            {{ $link['label'] }}
+                        <a href="mailto:contato@aagon.dev" class="font-mono text-xs text-[#A1A1AA] hover:text-[#0055FF] transition-colors">
+                            contato@aagon.dev
                         </a>
                     </li>
-                @endforeach
-            </ul>
-        </section>
-
-        <section class="text-center md:text-left">
-            <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-100">Contato</h3>
-            <ul class="mt-4 space-y-3 text-sm text-slate-300">
-                <li>
-                    <a href="mailto:{{ $contactInfo[0] }}" class="inline-flex rounded-md px-2 py-1.5 transition hover:bg-cyan-300/10 hover:text-cyan-200">
-                        {{ $contactInfo[0] }}
-                    </a>
-                </li>
-                <li>
-                    <a href="tel:+551100000000" class="inline-flex rounded-md px-2 py-1.5 transition hover:bg-cyan-300/10 hover:text-cyan-200">
-                        {{ $contactInfo[1] }}
-                    </a>
-                </li>
-                <li class="px-2 py-1.5">{{ $contactInfo[2] }}</li>
-            </ul>
-            <a href="#" class="mt-6 inline-flex w-full items-center justify-center rounded-full border border-cyan-300/40 px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-100 transition hover:border-cyan-200 hover:bg-cyan-300/10 hover:text-cyan-50 md:w-auto">
-                Falar com a Aagon
-            </a>
-        </section>
-    </div>
-
-    <div class="relative border-t border-cyan-950/40">
-        <div class="mx-auto flex w-full max-w-7xl flex-col gap-3 px-5 py-5 text-center text-xs text-slate-500 md:flex-row md:items-center md:justify-between md:px-8 md:text-left">
-            <p>&copy; {{ date('Y') }} Aagon. Todos os direitos reservados.</p>
-            <p>Corporate Website &amp; Content Management System</p>
+                    <li class="text-xs text-[#A1A1AA]">Caxias do Sul, RS — Brasil</li>
+                </ul>
+            </div>
+            <div class="col-span-12 md:col-span-3 space-y-4">
+                <div class="font-mono text-xs uppercase tracking-wider text-[#F5F5F5] border-b border-[#2D2D2D] pb-2">
+                    Connect
+                </div>
+                <ul class="space-y-2.5 text-sm">
+                    <li>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 hover:text-[#0055FF] transition-colors">
+                            <span>LinkedIn</span>
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 hover:text-[#0055FF] transition-colors">
+                            <span>GitHub</span>
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-16 pt-8 border-t border-[#2D2D2D] flex flex-col md:flex-row justify-between items-center gap-4 font-mono text-xs">
+            <div>
+                &copy; {{ date('Y') }} AAGON Technology &amp; Digital Engineering.
+            </div>
+            <div class="flex flex-wrap gap-6">
+                <a href="#" class="hover:text-[#0055FF] transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-[#0055FF] transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-[#0055FF] transition-colors">Cookie Policy</a>
+            </div>
         </div>
     </div>
 </footer>

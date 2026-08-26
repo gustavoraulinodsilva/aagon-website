@@ -24,20 +24,31 @@ function initHeader() {
 
     if (!toggle || !panel || !overlay || !closeButton) return;
 
+    if (panel.classList.contains('translate-x-full')) {
+        panel.setAttribute('inert', '');
+        panel.setAttribute('aria-hidden', 'true');
+    }
+
     const openMenu = () => {
         toggle.setAttribute('aria-expanded', 'true');
+        panel.removeAttribute('inert');
         panel.setAttribute('aria-hidden', 'false');
         panel.classList.remove('translate-x-full');
         overlay.classList.remove('hidden');
         document.body.classList.add('overflow-hidden');
+
+        closeButton.focus();
     };
 
     const closeMenu = () => {
         toggle.setAttribute('aria-expanded', 'false');
+        panel.setAttribute('inert', '');
         panel.setAttribute('aria-hidden', 'true');
         panel.classList.add('translate-x-full');
         overlay.classList.add('hidden');
         document.body.classList.remove('overflow-hidden');
+
+        toggle.focus();
     };
 
     toggle.addEventListener('click', () => {

@@ -1,235 +1,198 @@
 @extends('layout.master')
 
-@section('title', 'Aagon — Tecnologia que transforma')
+@section('title', 'AAGON — Technology & Digital Engineering')
 
 @section('content')
     @php
+        $timelineSteps = [
+            [
+                'number' => '01',
+                'title' => 'Mapeamento do Problema',
+                'description' => 'Desconstruímos desafios organizacionais complexos em requisitos técnicos discretos e executáveis.',
+                'active' => false,
+            ],
+            [
+                'number' => '02',
+                'title' => 'Estratégia Arquitetural',
+                'description' => 'Desenhamos blueprints resilientes e escaláveis que antecipam futuros vetores de crescimento e carga.',
+                'active' => false,
+            ],
+            [
+                'number' => '03',
+                'title' => 'Engenharia de Precisão',
+                'description' => 'Executamos o desenvolvimento com rigorosos protocolos de teste e padrões imutáveis de qualidade.',
+                'active' => false,
+            ],
+            [
+                'number' => '04',
+                'title' => 'Implantação de Soluções',
+                'description' => 'Integração transparente em ambientes operacionais com monitoramento contínuo e acompanhamento.',
+                'active' => true,
+            ],
+        ];
+
         $services = [
-            [
-                'title' => 'Software sob medida',
-                'description' => 'Sistemas web e plataformas internas desenhadas para o contexto real da sua operacao.',
-            ],
-            [
-                'title' => 'Consultoria tecnologica',
-                'description' => 'Direcao tecnica para modernizacao, arquitetura e evolucao de produtos digitais.',
-            ],
-            [
-                'title' => 'Automacao',
-                'description' => 'Fluxos operacionais automatizados para reduzir gargalos e ganhar eficiencia.',
-            ],
-            [
-                'title' => 'Integracao de sistemas',
-                'description' => 'Conectamos ERPs, CRMs e servicos para criar uma operacao realmente unificada.',
-            ],
-            [
-                'title' => 'Dados & Analytics',
-                'description' => 'Dashboards e camadas de dados para transformar informacao em decisao.',
-            ],
-        ];
-
-        $cases = [
-            [
-                'sector' => 'Industria',
-                'name' => 'Nexus Steel',
-                'summary' => 'Plataforma para planejamento de producao com visibilidade em tempo real.',
-            ],
-            [
-                'sector' => 'Logistica',
-                'name' => 'Atlas Logistics',
-                'summary' => 'Sistema operacional para roteirizacao e monitoramento de frota.',
-            ],
-            [
-                'sector' => 'Varejo',
-                'name' => 'Meridian Retail',
-                'summary' => 'Hub de integracao entre lojas fisicas, ecommerce e estoque central.',
-            ],
-            [
-                'sector' => 'Saude',
-                'name' => 'Vita Care',
-                'summary' => 'Portal para gestao de atendimentos e indicadores de performance clinica.',
-            ],
-        ];
-
-        $differentials = [
-            [
-                'title' => 'Engenharia',
-                'description' => 'Arquitetura robusta, codigo limpo e entregas sustentaveis no longo prazo.',
-            ],
-            [
-                'title' => 'Estrategia',
-                'description' => 'Cada decisao tecnica conecta tecnologia com objetivos de negocio.',
-            ],
-            [
-                'title' => 'Escalabilidade',
-                'description' => 'Produtos preparados para crescer sem reescritas dolorosas.',
-            ],
-            [
-                'title' => 'Seguranca',
-                'description' => 'Boas praticas e governanca desde o primeiro deploy.',
-            ],
+            ['title' => 'Software sob medida', 'desc' => 'Sistemas e plataformas web desenhadas para o contexto real da sua operação.'],
+            ['title' => 'Modernização de sistemas', 'desc' => 'Evolução e refatoração de softwares legados para arquiteturas escaláveis.'],
+            ['title' => 'Automação & Integração', 'desc' => 'Conexão entre ERPs, CRMs e serviços para criar uma operação unificada.'],
+            ['title' => 'Dados & Analytics', 'desc' => 'Dashboards e camadas de dados para transformar informação em decisão.'],
         ];
 
         $stats = [
             ['value' => '20+', 'label' => 'Projetos entregues'],
             ['value' => '12', 'label' => 'Setores atendidos'],
-            ['value' => '8', 'label' => 'Anos de experiencia'],
+            ['value' => '8', 'label' => 'Anos de experiência'],
         ];
     @endphp
+    <section class="relative min-h-screen flex items-center border-b border-[#2D2D2D] overflow-hidden -mt-20 pt-20 md:-mt-24 md:pt-24 bg-[#121212]">
+        <div class="absolute inset-0 z-0">
+            <video
+                class="absolute inset-0 h-full w-full object-cover opacity-25"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-hidden="true"
+            >
+                <source src="{{ asset('images/videos/aagon-hero.mp4') }}" type="video/mp4">
+            </video>
+        </div>
 
-    <section class="relative isolate -mt-20 min-h-screen overflow-hidden pt-32 md:-mt-24 md:pt-40">
-        <video
-            class="absolute inset-0 -z-30 h-full w-full object-cover"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-            aria-hidden="true"
-        >
-            <source src="{{ asset('images/videos/aagon-hero.mp4') }}" type="video/mp4">
-        </video>
+        <div class="absolute inset-0 z-10 bg-linear-to-t from-[#121212] via-[#121212]/60 to-transparent pointer-events-none"></div>
 
-        <div class="absolute inset-0 -z-20 bg-slate-950/70"></div>
-        <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_22%,rgba(34,211,238,0.28),transparent_45%),radial-gradient(circle_at_84%_80%,rgba(245,158,11,0.22),transparent_42%)]"></div>
-
-        <div class="mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-7xl items-end px-6 pb-16 md:items-center md:px-8 md:pb-20">
-            <div class="max-w-3xl space-y-8">
-                <p class="reveal inline-flex translate-y-6 rounded-full border border-cyan-200/30 bg-cyan-200/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-100 opacity-0 transition duration-700" data-reveal>
-                    Aagon Corporate Website
+        <div class="relative z-20 w-full max-w-360 mx-auto px-6 md:px-16 py-20">
+            <div class="max-w-4xl space-y-8">
+                <p class="reveal inline-flex rounded border border-[#2D2D2D] bg-[#1A1A1A] px-3.5 py-1.5 font-mono text-xs uppercase tracking-widest text-[#A1A1AA] opacity-0 transition duration-700" data-reveal>
+                    Technology & Digital Engineering
                 </p>
 
-                <h1 class="reveal translate-y-6 text-4xl font-semibold leading-tight tracking-tight text-white opacity-0 transition duration-700 sm:text-5xl md:text-6xl" data-reveal data-reveal-delay="120">
-                    Tecnologia que transforma
-                    <span class="text-cyan-200">complexidade em solucoes reais.</span>
+                <h1 class="reveal text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-[#F5F5F5] leading-[1.1] opacity-0 transition duration-700" data-reveal data-reveal-delay="120">
+                    AAGON — <br class="hidden md:block"/>Tecnologia desenvolvida para <span class="text-[#0055FF]">resolver problemas reais.</span>
                 </h1>
 
-                <p class="reveal max-w-2xl translate-y-6 text-base leading-relaxed text-slate-200/90 opacity-0 transition duration-700 sm:text-lg" data-reveal data-reveal-delay="220">
-                    Desenvolvemos produtos e sistemas digitais sob medida para empresas que precisam escalar com seguranca, performance e clareza de negocio.
+                <p class="reveal max-w-2xl text-lg md:text-xl text-[#A1A1AA] leading-relaxed opacity-0 transition duration-700" data-reveal data-reveal-delay="220">
+                    Projetamos e construímos soluções digitais para organizações que enfrentam desafios operacionais e tecnológicos complexos.
                 </p>
 
-                <div class="reveal flex translate-y-6 flex-col gap-3 opacity-0 transition duration-700 sm:flex-row sm:items-center" data-reveal data-reveal-delay="320">
-                    <a href="#" class="inline-flex items-center justify-center rounded-full bg-cyan-300 px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-slate-950 transition hover:bg-cyan-200">
-                        Conheca a Aagon
+                <div class="reveal flex flex-col sm:flex-row gap-4 pt-4 opacity-0 transition duration-700" data-reveal data-reveal-delay="320">
+                    <a href="{{ route('services') }}" class="px-8 py-4 bg-[#0055FF] text-white rounded font-mono text-xs uppercase tracking-wider font-medium hover:bg-opacity-90 transition-all flex items-center justify-center gap-2 group">
+                        <span>Nossas Capacidades</span>
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </a>
-                    <a href="#" class="inline-flex items-center justify-center rounded-full border border-slate-200/30 bg-slate-950/35 px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-slate-100 transition hover:border-cyan-200/50 hover:text-cyan-100">
-                        Fale conosco
+                    <a href="{{ route('projects') }}" class="px-8 py-4 bg-transparent text-[#F5F5F5] border border-[#2D2D2D] rounded font-mono text-xs uppercase tracking-wider font-medium hover:bg-[#242424] transition-colors flex items-center justify-center">
+                        Ver Projetos
                     </a>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="relative bg-slate-950 py-20 md:py-24">
-        <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-cyan-500/50 to-transparent"></div>
-
-        <div class="mx-auto w-full max-w-7xl px-6 md:px-8">
-            <div class="mb-12 flex flex-col gap-4 md:mb-14 md:flex-row md:items-end md:justify-between">
-                <div class="space-y-4">
-                    <p class="reveal translate-y-6 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200 opacity-0 transition duration-700" data-reveal>
-                        O que fazemos
+    <section class="py-28 bg-[#121212] border-b border-[#2D2D2D] flex items-center justify-center text-center">
+        <div class="max-w-4xl px-6 md:px-16">
+            <h2 class="reveal text-3xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-[#F5F5F5] leading-tight opacity-0 transition duration-700" data-reveal>
+                Problemas complexos exigem uma <span class="text-[#0055FF]">engenharia cuidadosa.</span>
+            </h2>
+        </div>
+    </section>
+    <section class="py-28 md:py-36 border-b border-[#2D2D2D] bg-[#121212] relative">
+        <div class="max-w-360 mx-auto px-6 md:px-16">
+            <div class="grid grid-cols-12 gap-y-12 md:gap-12">
+                <div class="col-span-12 md:col-span-5 space-y-6">
+                    <p class="reveal font-mono text-xs uppercase tracking-widest text-[#0055FF] opacity-0 transition duration-700" data-reveal>
+                        Metodologia
                     </p>
-                    <h2 class="reveal max-w-2xl translate-y-6 text-3xl font-semibold tracking-tight text-slate-50 opacity-0 transition duration-700 md:text-4xl" data-reveal data-reveal-delay="100">
-                        Solucoes digitais para operacoes complexas.
+                    <h2 class="reveal text-3xl md:text-4xl font-semibold tracking-tight text-[#F5F5F5] opacity-0 transition duration-700" data-reveal data-reveal-delay="90">
+                        Unindo visão estratégica e execução técnica.
                     </h2>
+                    <p class="reveal text-base md:text-lg text-[#A1A1AA] leading-relaxed opacity-0 transition duration-700" data-reveal data-reveal-delay="160">
+                        Ponte entre a visão estratégica e a execução técnica. Nossa metodologia garante que cada linha de código atenda a um propósito claro de negócio, eliminando o débito técnico antes mesmo que ele comece.
+                    </p>
+                </div>
+                <div class="col-span-12 md:col-span-6 md:col-start-7 flex flex-col gap-10 border-l border-[#2D2D2D] pl-8 relative">
+                    @foreach ($timelineSteps as $step)
+                        <div class="reveal flex gap-6 items-start relative opacity-0 transition duration-700" data-reveal data-reveal-delay="{{ 100 + ($loop->index * 80) }}">
+                            <div class="absolute -left-10.25 top-1.5 w-3 h-3 bg-[#121212] border-2 {{ $step['active'] ? 'border-[#0055FF] shadow-[0_0_10px_rgba(0,85,255,0.5)]' : 'border-[#2D2D2D]' }} rounded-full"></div>
+                            
+                            <span class="font-mono text-xs font-medium {{ $step['active'] ? 'text-[#0055FF]' : 'text-[#A1A1AA]' }} mt-1 w-8 shrink-0">
+                                {{ $step['number'] }}
+                            </span>
+                            
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 {{ $step['active'] ? 'text-[#0055FF]' : 'text-[#F5F5F5]' }}">
+                                    {{ $step['title'] }}
+                                </h3>
+                                <p class="text-sm md:text-base text-[#A1A1AA] leading-relaxed">
+                                    {{ $step['description'] }}
+                                </p>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="py-28 border-b border-[#2D2D2D] bg-[#121212]">
+        <div class="max-w-360 mx-auto px-6 md:px-16">
+            <div class="mb-14 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div class="space-y-3">
+                    <p class="reveal font-mono text-xs uppercase tracking-widest text-[#0055FF] opacity-0 transition duration-700" data-reveal>
+                        Capacidades
+                    </p>
+                    <h2 class="reveal text-3xl md:text-4xl font-semibold tracking-tight text-[#F5F5F5] opacity-0 transition duration-700" data-reveal data-reveal-delay="100">
+                        Soluções digitais para operações complexas.
+                    </h2>
+                </div>
+                <a href="{{ route('services') }}" class="reveal font-mono text-xs uppercase tracking-wider text-[#0055FF] hover:underline opacity-0 transition duration-700" data-reveal data-reveal-delay="150">
+                    Ver todos os serviços →
+                </a>
+            </div>
 
-            <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 @foreach ($services as $service)
-                    <article class="reveal group translate-y-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-5 opacity-0 transition duration-700 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-slate-900" data-reveal data-reveal-delay="{{ 80 + ($loop->index * 80) }}">
-                        <h3 class="text-lg font-semibold text-slate-100">{{ $service['title'] }}</h3>
-                        <p class="mt-3 text-sm leading-relaxed text-slate-400">{{ $service['description'] }}</p>
+                    <article class="reveal group p-6 bg-[#1A1A1A] border border-[#2D2D2D] rounded hover:border-[#0055FF]/50 transition-all duration-300 opacity-0" data-reveal data-reveal-delay="{{ 80 + ($loop->index * 80) }}">
+                        <h3 class="text-lg font-semibold text-[#F5F5F5] group-hover:text-[#0055FF] transition-colors">{{ $service['title'] }}</h3>
+                        <p class="mt-3 text-sm text-[#A1A1AA] leading-relaxed">{{ $service['desc'] }}</p>
                     </article>
                 @endforeach
             </div>
         </div>
     </section>
-
-    <section class="bg-slate-950 py-20 md:py-24">
-        <div class="mx-auto grid w-full max-w-7xl gap-10 px-6 md:grid-cols-[1.3fr_1fr] md:items-center md:px-8">
-            <div class="space-y-6">
-                <p class="reveal translate-y-6 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200 opacity-0 transition duration-700" data-reveal>
+    <section class="py-24 bg-[#121212]">
+        <div class="max-w-360 mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7 space-y-6">
+                <p class="reveal font-mono text-xs uppercase tracking-widest text-[#0055FF] opacity-0 transition duration-700" data-reveal>
                     Sobre a Aagon
                 </p>
-                <h2 class="reveal translate-y-6 text-3xl font-semibold tracking-tight text-slate-50 opacity-0 transition duration-700 md:text-4xl" data-reveal data-reveal-delay="90">
-                    Engenharia digital com foco em resultado real de negocio.
+                <h2 class="reveal text-3xl md:text-4xl font-semibold tracking-tight text-[#F5F5F5] opacity-0 transition duration-700" data-reveal data-reveal-delay="90">
+                    Engenharia digital com foco em resultado real de negócio.
                 </h2>
-                <p class="reveal max-w-2xl translate-y-6 text-base leading-relaxed text-slate-300 opacity-0 transition duration-700" data-reveal data-reveal-delay="180">
-                    Somos uma empresa ficticia criada para representar uma operacao moderna de tecnologia: orientada por estrategia, execucao tecnica e colaboracao proxima com times de produto e operacao.
+                <p class="reveal text-base md:text-lg text-[#A1A1AA] leading-relaxed opacity-0 transition duration-700" data-reveal data-reveal-delay="160">
+                    Atuamos de forma consultiva e executiva, projetando infraestruturas digitais resilientes e softwares sob medida preparados para o crescimento sustentável.
                 </p>
             </div>
 
-            <div class="grid grid-cols-3 gap-3 sm:gap-4">
+            <div class="md:col-span-5 grid grid-cols-3 gap-4">
                 @foreach ($stats as $stat)
-                    <div class="reveal translate-y-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-center opacity-0 transition duration-700 sm:p-5" data-reveal data-reveal-delay="{{ 120 + ($loop->index * 90) }}">
-                        <p class="text-2xl font-semibold text-cyan-200 sm:text-3xl">{{ $stat['value'] }}</p>
-                        <p class="mt-1 text-xs uppercase tracking-[0.14em] text-slate-400">{{ $stat['label'] }}</p>
+                    <div class="reveal p-5 bg-[#1A1A1A] border border-[#2D2D2D] rounded text-center opacity-0 transition duration-700" data-reveal data-reveal-delay="{{ 120 + ($loop->index * 90) }}">
+                        <p class="text-2xl md:text-3xl font-bold font-mono text-[#0055FF]">{{ $stat['value'] }}</p>
+                        <p class="mt-2 font-mono text-[10px] uppercase tracking-wider text-[#A1A1AA]">{{ $stat['label'] }}</p>
                     </div>
                 @endforeach
             </div>
         </div>
     </section>
-
-    <section class="relative bg-slate-950 py-20 md:py-24">
-        <div class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-amber-300/40 to-transparent"></div>
-
-        <div class="mx-auto w-full max-w-7xl px-6 md:px-8">
-            <div class="mb-12 space-y-4">
-                <p class="reveal translate-y-6 text-xs font-semibold uppercase tracking-[0.22em] text-amber-100 opacity-0 transition duration-700" data-reveal>
-                    Cases
-                </p>
-                <h2 class="reveal max-w-3xl translate-y-6 text-3xl font-semibold tracking-tight text-slate-50 opacity-0 transition duration-700 md:text-4xl" data-reveal data-reveal-delay="100">
-                    Projetos ficticios que representam desafios reais de mercado.
-                </h2>
-            </div>
-
-            <div class="grid gap-4 md:grid-cols-2">
-                @foreach ($cases as $case)
-                    <article class="reveal translate-y-6 overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/80 opacity-0 transition duration-700 hover:border-amber-200/30" data-reveal data-reveal-delay="{{ 100 + ($loop->index * 80) }}">
-                        <div class="h-32 bg-[radial-gradient(circle_at_18%_20%,rgba(34,211,238,0.35),transparent_45%),linear-gradient(140deg,rgba(15,23,42,0.6),rgba(30,41,59,0.2))]"></div>
-                        <div class="space-y-3 p-6">
-                            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-amber-100">{{ $case['sector'] }}</p>
-                            <h3 class="text-2xl font-semibold text-slate-100">{{ $case['name'] }}</h3>
-                            <p class="text-sm leading-relaxed text-slate-400">{{ $case['summary'] }}</p>
-                        </div>
-                    </article>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-slate-950 py-20 md:py-24">
-        <div class="mx-auto w-full max-w-7xl px-6 md:px-8">
-            <div class="mb-10 space-y-4">
-                <p class="reveal translate-y-6 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200 opacity-0 transition duration-700" data-reveal>
-                    Diferenciais
-                </p>
-                <h2 class="reveal max-w-3xl translate-y-6 text-3xl font-semibold tracking-tight text-slate-50 opacity-0 transition duration-700 md:text-4xl" data-reveal data-reveal-delay="100">
-                    Entrega com metodo, visao de produto e excelencia tecnica.
-                </h2>
-            </div>
-
-            <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-                @foreach ($differentials as $differential)
-                    <article class="reveal translate-y-6 rounded-2xl border border-cyan-950/40 bg-slate-900/60 p-5 opacity-0 transition duration-700 hover:border-cyan-300/30" data-reveal data-reveal-delay="{{ 100 + ($loop->index * 70) }}">
-                        <h3 class="text-lg font-semibold text-slate-100">{{ $differential['title'] }}</h3>
-                        <p class="mt-3 text-sm leading-relaxed text-slate-400">{{ $differential['description'] }}</p>
-                    </article>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-slate-950 pb-24 pt-8 md:pb-28">
-        <div class="mx-auto w-full max-w-7xl px-6 md:px-8">
-            <div class="reveal translate-y-6 overflow-hidden rounded-3xl border border-cyan-300/30 bg-[linear-gradient(120deg,rgba(34,211,238,0.16),rgba(15,23,42,0.9)_50%,rgba(245,158,11,0.12))] p-8 opacity-0 transition duration-700 md:p-12" data-reveal>
-                <p class="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-100">Tem um desafio?</p>
-                <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-50 md:text-5xl">Vamos conversar.</h2>
-                <p class="mt-4 max-w-2xl text-sm leading-relaxed text-slate-300 md:text-base">
-                    Construimos junto com seu time a proxima etapa digital da empresa, com foco em impacto de negocio e evolucao continua.
-                </p>
-                <a href="#" class="mt-7 inline-flex items-center justify-center rounded-full bg-cyan-300 px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-slate-950 transition hover:bg-cyan-200">
-                    Entre em contato
+    <section class="py-24 bg-[#121212] border-t border-[#2D2D2D]">
+        <div class="max-w-360 mx-auto px-6 md:px-16">
+            <div class="reveal p-10 md:p-16 bg-[#1A1A1A] border border-[#2D2D2D] rounded flex flex-col md:flex-row items-start md:items-center justify-between gap-8 opacity-0 transition duration-700" data-reveal>
+                <div class="space-y-3 max-w-2xl">
+                    <p class="font-mono text-xs uppercase tracking-widest text-[#0055FF]">Tem um desafio?</p>
+                    <h2 class="text-3xl md:text-5xl font-semibold tracking-tight text-[#F5F5F5]">Vamos conversar.</h2>
+                    <p class="text-sm md:text-base text-[#A1A1AA] leading-relaxed">
+                        Construímos junto com seu time a próxima etapa digital da empresa, com foco em impacto de negócio e evolução contínua.
+                    </p>
+                </div>
+                <a href="{{ route('contact') }}" class="px-8 py-4 bg-[#0055FF] text-white rounded font-mono text-xs uppercase tracking-wider font-medium hover:bg-opacity-90 transition-all shrink-0">
+                    Iniciar um Projeto
                 </a>
             </div>
         </div>

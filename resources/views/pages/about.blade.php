@@ -6,181 +6,215 @@
     @php
         $approachPillars = [
             [
-                'title' => 'Contexto antes de codigo',
-                'description' => 'Mergulhamos no processo do cliente para construir solucoes com impacto de negocio.',
+                'number' => '01',
+                'title' => 'Contexto antes de código',
+                'description' => 'Mergulhamos no processo do cliente para construir soluções com impacto direto de negócio.',
             ],
             [
-                'title' => 'Arquitetura orientada a crescimento',
-                'description' => 'Tomamos decisoes tecnicas pensando em manutencao, evolucao e escala.',
+                'number' => '02',
+                'title' => 'Arquitetura para escala',
+                'description' => 'Tomamos decisões técnicas pensando na manutenção, segurança e evolução a longo prazo.',
             ],
             [
+                'number' => '03',
                 'title' => 'Entrega iterativa',
-                'description' => 'Priorizamos ciclos curtos com validacao constante para reduzir risco.',
+                'description' => 'Priorizamos ciclos curtos com validação constante para reduzir riscos e acelerar resultados.',
             ],
         ];
 
         $workflowSteps = [
             [
                 'step' => '01',
-                'title' => 'Diagnostico',
-                'description' => 'Mapeamos dores, operacao e metas para definir o escopo essencial.',
+                'title' => 'Diagnóstico',
+                'description' => 'Mapeamos dores, operação e metas para definir o escopo essencial.',
             ],
             [
                 'step' => '02',
-                'title' => 'Design da solucao',
+                'title' => 'Design da solução',
                 'description' => 'Desenhamos arquitetura, fluxos e prioridades com foco em viabilidade.',
             ],
             [
                 'step' => '03',
-                'title' => 'Construcao e evolucao',
-                'description' => 'Entregamos em etapas com transparencia e acompanhamento de resultados.',
+                'title' => 'Construção e evolução',
+                'description' => 'Entregamos em etapas com transparência e acompanhamento contínuo.',
             ],
         ];
 
         $values = [
-            'Clareza na comunicacao',
+            'Clareza na comunicação',
             'Compromisso com qualidade',
             'Parceria de longo prazo',
-            'Responsabilidade tecnica',
+            'Responsabilidade técnica',
         ];
 
         $numbers = [
             ['value' => 20, 'suffix' => '+', 'label' => 'Projetos entregues'],
             ['value' => 12, 'suffix' => '', 'label' => 'Setores atendidos'],
-            ['value' => 8, 'suffix' => '', 'label' => 'Anos de experiencia'],
+            ['value' => 8, 'suffix' => '', 'label' => 'Anos de experiência'],
             ['value' => 95, 'suffix' => '%', 'label' => 'Clientes recorrentes'],
         ];
     @endphp
 
-    <div class="bg-slate-950 pb-24 pt-28 md:pt-36" data-about-page>
-        <section class="mx-auto grid w-full max-w-7xl gap-10 px-6 md:grid-cols-[1.1fr_1fr] md:items-center md:px-8">
-            <div class="space-y-6">
-                <p class="reveal translate-y-6 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200 opacity-0 transition duration-700"
-                    data-reveal>
-                    Quem somos
-                </p>
-                <h1 class="reveal translate-y-6 text-4xl font-semibold leading-tight tracking-tight text-slate-50 opacity-0 transition duration-700 sm:text-5xl"
-                    data-reveal data-reveal-delay="100">
-                    Uma empresa ficticia criada para representar uma consultoria digital moderna.
-                </h1>
-                <p class="reveal max-w-2xl translate-y-6 text-base leading-relaxed text-slate-300 opacity-0 transition duration-700"
-                    data-reveal data-reveal-delay="180">
-                    A Aagon combina estrategia e engenharia para transformar desafios complexos em produtos digitais claros,
-                    eficientes e escalaveis para diferentes segmentos empresariais.
-                </p>
+    <div class="bg-[#121212] text-[#F5F5F5] pb-24 pt-28 md:pt-36" data-about-page>
+        <section class="mx-auto max-w-360 px-6 md:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12 items-end">
+                <div class="md:col-span-8 space-y-4">
+                    <p class="reveal font-mono text-xs font-medium uppercase tracking-widest text-[#0055FF] opacity-0 transition duration-700"
+                        data-reveal>
+                        Quem somos
+                    </p>
+                    <h1 class="reveal text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#F5F5F5] leading-tight opacity-0 transition duration-700"
+                        data-reveal data-reveal-delay="100">
+                        Engenharia de software com propósito e clareza.
+                    </h1>
+                </div>
+                <div class="md:col-span-4">
+                    <p class="reveal text-base md:text-lg text-[#A1A1AA] leading-relaxed opacity-0 transition duration-700"
+                        data-reveal data-reveal-delay="180">
+                        A Aagon combina estratégia e engenharia para transformar desafios operacionais complexos em produtos digitais claros, eficientes e escaláveis.
+                    </p>
+                </div>
             </div>
-
-            <figure
-                class="reveal relative translate-y-6 overflow-hidden rounded-3xl border border-cyan-900/40 opacity-0 transition duration-700"
+            <figure class="reveal relative overflow-hidden rounded border border-[#2D2D2D] bg-[#1A1A1A] opacity-0 transition duration-700"
                 data-reveal data-reveal-delay="220">
-                <img src="{{ asset('images/aboutimageaagon.jpeg') }}" alt="Equipe da Aagon em reuniao estrategica"
-                    class="h-95 w-full object-cover md:h-115" loading="lazy">
-                <figcaption
-                    class="absolute inset-x-4 bottom-4 rounded-xl border border-slate-300/20 bg-slate-950/65 px-4 py-3 text-sm text-slate-100 backdrop-blur">
-                    Time multidisciplinar focado em engenharia, estrategia e impacto de negocio.
+                <img src="{{ asset('images/aboutimageaagon.jpeg') }}" alt="Equipe da Aagon em reunião estratégica"
+                    class="h-87.5 md:h-137.5 w-full object-cover opacity-90" loading="lazy">
+                <figcaption class="absolute inset-x-4 bottom-4 md:inset-x-6 md:bottom-6 rounded border border-[#2D2D2D] bg-[#121212]/80 px-5 py-3 text-xs md:text-sm text-[#A1A1AA] backdrop-blur font-mono">
+                    Time multidisciplinar focado em engenharia de precisão, arquitetura e impacto de negócio.
                 </figcaption>
             </figure>
         </section>
-
-        <section class="mx-auto mt-20 w-full max-w-7xl px-6 md:px-8">
-            <div class="mb-8 space-y-3">
-                <p class="reveal translate-y-6 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200 opacity-0 transition duration-700"
-                    data-reveal>
-                    Nossa abordagem
+        <section class="mx-auto mt-28 max-w-360 px-6 md:px-16 py-16 border-y border-[#2D2D2D] bg-[#121212]">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-4 space-y-3">
+                    <span class="inline-block bg-[#1A1A1A] border border-[#2D2D2D] px-3 py-1 font-mono text-xs text-[#A1A1AA]">
+                        FILOSOFIA
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-[#F5F5F5]">
+                        Resolutores de problemas em primeiro lugar.
+                    </h2>
+                </div>
+                <div class="md:col-span-7 md:col-start-6 space-y-8">
+                    <p class="text-base md:text-lg text-[#A1A1AA] leading-relaxed">
+                        Fundamos a Aagon com uma premissa simples: excelência técnica é irrelevante se for aplicada ao problema errado. Entendemos a fundo o domínio de negócio dos nossos clientes antes de escrever a primeira linha de código.
+                    </p>
+                    <div class="p-8 bg-[#1A1A1A] border border-[#2D2D2D] rounded">
+                        <span class="block font-mono text-xs uppercase tracking-widest text-[#0055FF] mb-3">MANIFESTO</span>
+                        <p class="text-xl md:text-2xl font-medium text-[#F5F5F5] italic">
+                            "A tecnologia não é o ponto de partida. O problema é."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mx-auto mt-28 max-w-360 px-6 md:px-16">
+            <div class="mb-12 space-y-3">
+                <p class="reveal font-mono text-xs uppercase tracking-widest text-[#0055FF] opacity-0 transition duration-700" data-reveal>
+                    Abordagem
                 </p>
-                <h2 class="reveal translate-y-6 text-3xl font-semibold tracking-tight text-slate-50 opacity-0 transition duration-700 md:text-4xl"
-                    data-reveal data-reveal-delay="90">
-                    Cada projeto nasce da combinacao entre visao de negocio e precisao tecnica.
+                <h2 class="reveal text-3xl md:text-4xl font-semibold tracking-tight text-[#F5F5F5] opacity-0 transition duration-700" data-reveal data-reveal-delay="90">
+                    Construído ao redor de problemas reais, não de tendências.
                 </h2>
             </div>
 
-            <div class="grid gap-4 md:grid-cols-3">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-[#2D2D2D] bg-[#1A1A1A] rounded overflow-hidden">
                 @foreach ($approachPillars as $pillar)
-                    <article
-                        class="reveal translate-y-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-6 opacity-0 transition duration-700 hover:border-cyan-300/30"
+                    <article class="reveal p-8 border-b md:border-b-0 md:border-r border-[#2D2D2D] relative group hover:bg-[#242424] transition-colors opacity-0 duration-700"
                         data-reveal data-reveal-delay="{{ 100 + $loop->index * 90 }}">
-                        <h3 class="text-lg font-semibold text-slate-100">{{ $pillar['title'] }}</h3>
-                        <p class="mt-3 text-sm leading-relaxed text-slate-400">{{ $pillar['description'] }}</p>
+                        <span class="absolute top-8 right-8 font-mono text-xs font-bold text-[#0055FF]">
+                            {{ $pillar['number'] }}
+                        </span>
+                        <h3 class="text-xl font-semibold text-[#F5F5F5] mt-6 mb-3 group-hover:text-[#0055FF] transition-colors">
+                            {{ $pillar['title'] }}
+                        </h3>
+                        <p class="text-sm text-[#A1A1AA] leading-relaxed">
+                            {{ $pillar['description'] }}
+                        </p>
                     </article>
                 @endforeach
             </div>
         </section>
-
-        <section class="mx-auto mt-20 w-full max-w-7xl px-6 md:px-8">
-            <div class="mb-8 space-y-3">
-                <p class="reveal translate-y-6 text-xs font-semibold uppercase tracking-[0.22em] text-amber-100 opacity-0 transition duration-700"
-                    data-reveal>
-                    Como trabalhamos
+        <section class="mx-auto mt-28 max-w-360 px-6 md:px-16">
+            <div class="mb-12 space-y-3">
+                <p class="reveal font-mono text-xs uppercase tracking-widest text-[#0055FF] opacity-0 transition duration-700" data-reveal>
+                    Processo
                 </p>
-                <h2 class="reveal translate-y-6 text-3xl font-semibold tracking-tight text-slate-50 opacity-0 transition duration-700 md:text-4xl"
-                    data-reveal data-reveal-delay="90">
-                    Processo simples, colaborativo e orientado por resultado.
+                <h2 class="reveal text-3xl md:text-4xl font-semibold tracking-tight text-[#F5F5F5] opacity-0 transition duration-700" data-reveal data-reveal-delay="90">
+                    Workflow simples, colaborativo e transparente.
                 </h2>
             </div>
 
-            <div class="grid gap-4 md:grid-cols-3">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-[#2D2D2D] bg-[#1A1A1A] rounded overflow-hidden">
                 @foreach ($workflowSteps as $step)
-                    <article
-                        class="reveal translate-y-6 rounded-2xl border border-amber-200/15 bg-slate-900/80 p-6 opacity-0 transition duration-700 hover:border-amber-200/35"
+                    <article class="reveal p-8 border-b md:border-b-0 md:border-r border-[#2D2D2D] relative group hover:bg-[#242424] transition-colors opacity-0 duration-700"
                         data-reveal data-reveal-delay="{{ 120 + $loop->index * 80 }}">
-                        <p class="text-xs font-semibold tracking-[0.22em] text-amber-100">{{ $step['step'] }}</p>
-                        <h3 class="mt-2 text-xl font-semibold text-slate-100">{{ $step['title'] }}</h3>
-                        <p class="mt-3 text-sm leading-relaxed text-slate-400">{{ $step['description'] }}</p>
+                        <span class="font-mono text-xs uppercase tracking-widest text-[#0055FF]">
+                            Passo {{ $step['step'] }}
+                        </span>
+                        <h3 class="mt-3 text-xl font-semibold text-[#F5F5F5]">{{ $step['title'] }}</h3>
+                        <p class="mt-3 text-sm text-[#A1A1AA] leading-relaxed">{{ $step['description'] }}</p>
                     </article>
                 @endforeach
             </div>
         </section>
-
-        <section class="mx-auto mt-20 w-full max-w-7xl px-6 md:px-8">
-            <div
-                class="grid gap-10 rounded-3xl border border-cyan-900/30 bg-slate-900/70 p-8 md:grid-cols-[1fr_1.2fr] md:p-10">
-                <div>
-                    <p class="reveal translate-y-6 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200 opacity-0 transition duration-700"
-                        data-reveal>
+        <section class="mx-auto mt-28 max-w-360 px-6 md:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 rounded border border-[#2D2D2D] bg-[#1A1A1A] p-8 md:p-12 items-center">
+                <div class="md:col-span-5 space-y-4">
+                    <p class="reveal font-mono text-xs uppercase tracking-widest text-[#0055FF] opacity-0 transition duration-700" data-reveal>
                         Valores
                     </p>
-                    <h2 class="reveal mt-3 translate-y-6 text-3xl font-semibold tracking-tight text-slate-50 opacity-0 transition duration-700"
-                        data-reveal data-reveal-delay="90">
-                        O que guia nossas decisoes.
+                    <h2 class="reveal text-3xl md:text-4xl font-semibold tracking-tight text-[#F5F5F5] opacity-0 transition duration-700" data-reveal data-reveal-delay="90">
+                        O que guia nossas decisões técnicas e humanas.
                     </h2>
                 </div>
 
-                <ul class="grid gap-3 sm:grid-cols-2">
-                    @foreach ($values as $value)
-                        <li class="reveal flex translate-y-6 items-center rounded-xl border border-slate-800 bg-slate-950/50 px-4 py-3 text-sm text-slate-200 opacity-0 transition duration-700"
-                            data-reveal data-reveal-delay="{{ 110 + $loop->index * 70 }}">
-                            <span class="mr-3 inline-block h-2.5 w-2.5 rounded-full bg-cyan-300"></span>
-                            {{ $value }}
-                        </li>
-                    @endforeach
-                </ul>
+                <div class="md:col-span-7">
+                    <ul class="grid gap-4 sm:grid-cols-2">
+                        @foreach ($values as $value)
+                            <li class="reveal flex items-center rounded border border-[#2D2D2D] bg-[#121212] px-5 py-4 text-sm font-medium text-[#F5F5F5] opacity-0 transition duration-700"
+                                data-reveal data-reveal-delay="{{ 110 + $loop->index * 70 }}">
+                                <span class="mr-3 h-2 w-2 rounded-full bg-[#0055FF]"></span>
+                                {{ $value }}
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
             </div>
         </section>
-
-        <section class="mx-auto mt-20 w-full max-w-7xl px-6 md:px-8">
-            <div class="mb-8 space-y-3">
-                <p class="reveal translate-y-6 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200 opacity-0 transition duration-700"
-                    data-reveal>
-                    Numeros
+        <section class="mx-auto mt-28 max-w-360 px-6 md:px-16">
+            <div class="mb-12 space-y-3">
+                <p class="reveal font-mono text-xs uppercase tracking-widest text-[#0055FF] opacity-0 transition duration-700" data-reveal>
+                    Métricas
                 </p>
-                <h2 class="reveal translate-y-6 text-3xl font-semibold tracking-tight text-slate-50 opacity-0 transition duration-700 md:text-4xl"
-                    data-reveal data-reveal-delay="90">
-                    Indicadores plausiveis de uma operacao em crescimento.
+                <h2 class="reveal text-3xl md:text-4xl font-semibold tracking-tight text-[#F5F5F5] opacity-0 transition duration-700" data-reveal data-reveal-delay="90">
+                    Indicadores de uma operação sólida e em constante evolução.
                 </h2>
             </div>
 
-            <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
                 @foreach ($numbers as $item)
-                    <article
-                        class="reveal translate-y-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-6 text-center opacity-0 transition duration-700"
+                    <article class="reveal rounded border border-[#2D2D2D] bg-[#1A1A1A] p-8 text-center opacity-0 transition duration-700"
                         data-reveal data-reveal-delay="{{ 120 + $loop->index * 80 }}">
-                        <p class="text-4xl font-semibold text-cyan-200">
+                        <p class="text-4xl md:text-5xl font-bold font-mono text-[#0055FF]">
                             <span data-counter="{{ $item['value'] }}">0</span>{{ $item['suffix'] }}
                         </p>
-                        <p class="mt-2 text-xs uppercase tracking-[0.15em] text-slate-400">{{ $item['label'] }}</p>
+                        <p class="mt-3 font-mono text-xs uppercase tracking-wider text-[#A1A1AA]">{{ $item['label'] }}</p>
                     </article>
                 @endforeach
             </div>
         </section>
+        <section class="mx-auto mt-28 max-w-360 px-6 md:px-16 text-center">
+            <div class="p-12 md:p-16 border border-[#2D2D2D] bg-[#1A1A1A] rounded flex flex-col items-center justify-center space-y-6">
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-[#F5F5F5]">Pronto para construir?</h2>
+                <p class="text-base text-[#A1A1AA] max-w-xl">
+                    Vamos conversar sobre os desafios da sua empresa e como desenhar a melhor solução digital.
+                </p>
+                <a href="{{ route('contact') }}" class="inline-flex items-center gap-2 bg-[#0055FF] text-white px-8 py-4 rounded font-mono text-xs font-medium uppercase tracking-wider hover:bg-opacity-90 transition-all">
+                    <span>Iniciar uma conversa</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            </div>
+        </section>
+
     </div>
 @endsection

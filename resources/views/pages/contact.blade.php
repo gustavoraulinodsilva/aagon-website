@@ -3,110 +3,139 @@
 @section('title', 'Aagon — Contato')
 
 @section('content')
-    <div class="bg-slate-950 pb-24 pt-28 md:pt-36">
-        <section class="mx-auto max-w-7xl px-6 md:px-8">
-            <div class="max-w-3xl space-y-6">
-                <p class="reveal inline-flex rounded-full border border-cyan-200/30 bg-cyan-200/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-100 opacity-0 transition duration-700" data-reveal>
-                    Contato
-                </p>
-                <h1 class="reveal text-4xl font-semibold leading-tight tracking-tight text-slate-50 opacity-0 transition duration-700 sm:text-5xl md:text-6xl" data-reveal data-reveal-delay="100">
-                    Vamos conversar sobre seu <span class="text-cyan-200">próximo desafio.</span>
-                </h1>
-                <p class="reveal text-base leading-relaxed text-slate-300 opacity-0 transition duration-700 sm:text-lg" data-reveal data-reveal-delay="180">
-                    Preencha o formulário ou utilize nossos canais diretos para avaliar seu cenário com nosso time de engenharia.
-                </p>
+    <div class="bg-[#121212] text-[#F5F5F5] pb-24 pt-28 md:pt-36">
+        <section class="mx-auto max-w-360 px-6 md:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end border-b border-[#2D2D2D] pb-16">
+                <div class="md:col-span-8 space-y-6">
+                    <p class="reveal font-mono text-xs font-medium uppercase tracking-widest text-[#0055FF] opacity-0 transition duration-700"
+                        data-reveal>
+                        Contato
+                    </p>
+                    <h1 class="reveal border-l-4 border-[#0055FF] pl-6 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#F5F5F5] leading-tight opacity-0 transition duration-700"
+                        data-reveal data-reveal-delay="100">
+                        Vamos conversar sobre seu <span class="text-[#0055FF]">próximo desafio.</span>
+                    </h1>
+                </div>
+                <div class="md:col-span-4">
+                    <p class="reveal text-base md:text-lg text-[#A1A1AA] leading-relaxed opacity-0 transition duration-700"
+                        data-reveal data-reveal-delay="180">
+                        Preencha o formulário abaixo ou utilize nossos canais diretos para avaliar seu cenário técnico com nosso time de engenharia.
+                    </p>
+                </div>
             </div>
         </section>
-        <section class="mx-auto mt-16 max-w-7xl px-6 md:px-8">
-            <div class="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-start">
-                <div class="space-y-8 rounded-3xl border border-slate-800 bg-slate-900/60 p-8 md:p-10">
+        <section class="mx-auto mt-16 max-w-360 px-6 md:px-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-5 space-y-8 rounded border border-[#2D2D2D] bg-[#1A1A1A] p-8 md:p-10">
                     <div class="space-y-3">
-                        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200">Atendimento Direto</p>
-                        <h2 class="text-2xl font-semibold text-slate-50 md:text-3xl">Canais de acesso rápido</h2>
-                        <p class="text-sm leading-relaxed text-slate-400">
-                            Se preferir um contato mais direto, estamos disponíveis via e-mail e nos principais canais corporativos.
+                        <p class="font-mono text-xs font-semibold uppercase tracking-widest text-[#0055FF]">Atendimento Direto</p>
+                        <h2 class="text-2xl font-bold text-[#F5F5F5] md:text-3xl">Canais de acesso rápido</h2>
+                        <p class="text-sm leading-relaxed text-[#A1A1AA]">
+                            Se preferir um contato mais direto, estamos disponíveis via e-mail e nos canais corporativos abaixo.
                         </p>
                     </div>
 
-                    <hr class="border-slate-800/80">
-
-                    <div class="space-y-6">
-                        <div class="space-y-1">
-                            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-amber-100">E-mail corporativo</p>
-                            <a href="mailto:contato@aagon.dev" class="text-lg font-medium text-slate-100 transition hover:text-cyan-300">
+                    <div class="space-y-6 pt-6 border-t border-[#2D2D2D]">
+                        <div class="group border-l-2 border-[#2D2D2D] pl-4 hover:border-[#0055FF] transition-colors">
+                            <span class="font-mono text-[11px] uppercase tracking-widest text-[#0055FF] block mb-1">E-mail corporativo</span>
+                            <a href="mailto:contato@aagon.dev" class="font-mono text-base font-medium text-[#F5F5F5] hover:text-[#0055FF] transition-colors">
                                 contato@aagon.dev
                             </a>
                         </div>
 
-                        <div class="space-y-1">
-                            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-amber-100">Localização</p>
-                            <p class="text-base text-slate-200">Caxias do Sul, RS — Brasil</p>
+                        <div class="group border-l-2 border-[#2D2D2D] pl-4 hover:border-[#0055FF] transition-colors">
+                            <span class="font-mono text-[11px] uppercase tracking-widest text-[#0055FF] block mb-1">Localização</span>
+                            <p class="font-mono text-sm text-[#F5F5F5]">Caxias do Sul, RS — Brasil</p>
                         </div>
 
-                        <div class="space-y-1">
-                            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-amber-100">Horário de operação</p>
-                            <p class="text-sm text-slate-300">Segunda a Sexta, das 08h às 18h</p>
+                        <div class="group border-l-2 border-[#2D2D2D] pl-4 hover:border-[#0055FF] transition-colors">
+                            <span class="font-mono text-[11px] uppercase tracking-widest text-[#0055FF] block mb-1">Horário de operação</span>
+                            <p class="font-mono text-sm text-[#A1A1AA]">Segunda a Sexta, das 08h às 18h</p>
+                        </div>
+
+                        <div class="group border-l-2 border-[#2D2D2D] pl-4 hover:border-[#0055FF] transition-colors">
+                            <span class="font-mono text-[11px] uppercase tracking-widest text-[#0055FF] block mb-1">Disponibilidade</span>
+                            <div class="flex items-center space-x-2 mt-1">
+                                <span class="h-2 w-2 rounded-full bg-[#0055FF] animate-pulse"></span>
+                                <span class="font-mono text-xs text-[#F5F5F5]">Aceitando novos projetos</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="rounded-3xl border border-cyan-900/30 bg-slate-900/80 p-8 md:p-10">
-                    <form action="#" class="space-y-5">
-                        <div class="grid gap-5 sm:grid-cols-2">
-                            <div class="space-y-2">
-                                <label for="name" class="block text-xs font-semibold uppercase tracking-[0.16em] text-slate-300">
+                <div class="lg:col-span-7 rounded border border-[#2D2D2D] bg-[#1A1A1A] p-8 md:p-12">
+                    <form action="#" method="POST" class="space-y-6">
+                        @csrf
+                        <div class="grid gap-6 sm:grid-cols-2">
+                            <div class="space-y-2 flex flex-col">
+                                <label for="name" class="font-mono text-xs uppercase tracking-widest text-[#A1A1AA]">
                                     Nome *
                                 </label>
                                 <input type="text" id="name" name="name" required placeholder="Seu nome completo"
-                                    class="w-full rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3 text-sm text-slate-100 placeholder-slate-500 transition focus:border-cyan-300/60 focus:outline-none focus:ring-1 focus:ring-cyan-300/60">
+                                    class="w-full rounded border border-[#2D2D2D] bg-[#121212] px-4 py-3 font-mono text-sm text-[#F5F5F5] placeholder-[#52525B] transition focus:border-[#0055FF] focus:outline-none focus:ring-1 focus:ring-[#0055FF]">
                             </div>
-                            <div class="space-y-2">
-                                <label for="email" class="block text-xs font-semibold uppercase tracking-[0.16em] text-slate-300">
+
+                            <div class="space-y-2 flex flex-col">
+                                <label for="email" class="font-mono text-xs uppercase tracking-widest text-[#A1A1AA]">
                                     E-mail *
                                 </label>
                                 <input type="email" id="email" name="email" required placeholder="seu@email.com"
-                                    class="w-full rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3 text-sm text-slate-100 placeholder-slate-500 transition focus:border-cyan-300/60 focus:outline-none focus:ring-1 focus:ring-cyan-300/60">
+                                    class="w-full rounded border border-[#2D2D2D] bg-[#121212] px-4 py-3 font-mono text-sm text-[#F5F5F5] placeholder-[#52525B] transition focus:border-[#0055FF] focus:outline-none focus:ring-1 focus:ring-[#0055FF]">
                             </div>
                         </div>
 
-                        <div class="grid gap-5 sm:grid-cols-2">
-                            <div class="space-y-2">
-                                <label for="company" class="block text-xs font-semibold uppercase tracking-[0.16em] text-slate-300">
+                        <div class="grid gap-6 sm:grid-cols-2">
+                            <div class="space-y-2 flex flex-col">
+                                <label for="company" class="font-mono text-xs uppercase tracking-widest text-[#A1A1AA]">
                                     Empresa
                                 </label>
                                 <input type="text" id="company" name="company" placeholder="Nome da empresa"
-                                    class="w-full rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3 text-sm text-slate-100 placeholder-slate-500 transition focus:border-cyan-300/60 focus:outline-none focus:ring-1 focus:ring-cyan-300/60">
+                                    class="w-full rounded border border-[#2D2D2D] bg-[#121212] px-4 py-3 font-mono text-sm text-[#F5F5F5] placeholder-[#52525B] transition focus:border-[#0055FF] focus:outline-none focus:ring-1 focus:ring-[#0055FF]">
                             </div>
-                            <div class="space-y-2">
-                                <label for="phone" class="block text-xs font-semibold uppercase tracking-[0.16em] text-slate-300">
+
+                            <div class="space-y-2 flex flex-col">
+                                <label for="phone" class="font-mono text-xs uppercase tracking-widest text-[#A1A1AA]">
                                     Telefone / WhatsApp
                                 </label>
                                 <input type="text" id="phone" name="phone" placeholder="(00) 00000-0000"
-                                    class="w-full rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3 text-sm text-slate-100 placeholder-slate-500 transition focus:border-cyan-300/60 focus:outline-none focus:ring-1 focus:ring-cyan-300/60">
+                                    class="w-full rounded border border-[#2D2D2D] bg-[#121212] px-4 py-3 font-mono text-sm text-[#F5F5F5] placeholder-[#52525B] transition focus:border-[#0055FF] focus:outline-none focus:ring-1 focus:ring-[#0055FF]">
                             </div>
                         </div>
-                        <div class="space-y-2">
-                            <label for="subject" class="block text-xs font-semibold uppercase tracking-[0.16em] text-slate-300">
+
+                        <div class="space-y-2 flex flex-col">
+                            <label for="subject" class="font-mono text-xs uppercase tracking-widest text-[#A1A1AA]">
                                 Assunto *
                             </label>
-                            <input type="text" id="subject" name="subject" required placeholder="Como podemos ajudar?"
-                                class="w-full rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3 text-sm text-slate-100 placeholder-slate-500 transition focus:border-cyan-300/60 focus:outline-none focus:ring-1 focus:ring-cyan-300/60">
+                            <select id="subject" name="subject" required
+                                class="w-full rounded border border-[#2D2D2D] bg-[#121212] px-4 py-3 font-mono text-sm text-[#F5F5F5] transition focus:border-[#0055FF] focus:outline-none focus:ring-1 focus:ring-[#0055FF]">
+                                <option value="" disabled selected class="text-[#52525B]">Selecione o tipo de assunto</option>
+                                <option value="software">Software Sob Medida</option>
+                                <option value="modernization">Modernização de Sistemas</option>
+                                <option value="automation">Automação & Integração</option>
+                                <option value="data">Dados & Analytics</option>
+                                <option value="other">Outro Assunto</option>
+                            </select>
                         </div>
-                        <div class="space-y-2">
-                            <label for="message" class="block text-xs font-semibold uppercase tracking-[0.16em] text-slate-300">
+
+                        <div class="space-y-2 flex flex-col">
+                            <label for="message" class="font-mono text-xs uppercase tracking-widest text-[#A1A1AA]">
                                 Mensagem *
                             </label>
-                            <textarea id="message" name="message" rows="4" required placeholder="Descreva brevemente o projeto ou desafio..."
-                                class="w-full rounded-xl border border-slate-800 bg-slate-950/60 px-4 py-3 text-sm text-slate-100 placeholder-slate-500 transition focus:border-cyan-300/60 focus:outline-none focus:ring-1 focus:ring-cyan-300/60 resize-none"></textarea>
+                            <textarea id="message" name="message" rows="5" required placeholder="Descreva brevemente o projeto ou desafio operacional..."
+                                class="w-full rounded border border-[#2D2D2D] bg-[#121212] px-4 py-3 font-mono text-sm text-[#F5F5F5] placeholder-[#52525B] transition focus:border-[#0055FF] focus:outline-none focus:ring-1 focus:ring-[#0055FF] resize-none"></textarea>
                         </div>
+
                         <div class="pt-2">
                             <button type="submit"
-                                class="inline-flex w-full items-center justify-center rounded-full bg-cyan-300 px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-slate-950 transition hover:bg-cyan-200">
-                                Enviar mensagem
+                                class="w-full rounded bg-[#0055FF] px-8 py-4 font-mono text-xs font-medium uppercase tracking-wider text-white transition hover:bg-opacity-90 active:scale-95 flex items-center justify-center gap-2">
+                                <span>Enviar mensagem</span>
+                                <span>&rarr;</span>
                             </button>
                         </div>
                     </form>
                 </div>
+
             </div>
         </section>
+
     </div>
 @endsection

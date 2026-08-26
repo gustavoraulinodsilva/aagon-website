@@ -14,15 +14,21 @@ use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
+use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
+use UnitEnum;
 
 class HomeTexts extends Page implements HasForms
 {
     use InteractsWithForms;
 
     public ?array $data = [];
+
+    protected static string | UnitEnum | null $navigationGroup = 'Página Inicial';
+    
+    protected static ?int $navigationSort = 1;
 
     protected static ?string $navigationLabel = 'Home - Textos';
 
@@ -106,6 +112,7 @@ class HomeTexts extends Page implements HasForms
                             ])
                             ->maxSize(12288)
                             ->preserveFilenames()
+                            ->previewable(false)
                             ->required(),
 
                         TextInput::make('hero_eyebrow')
@@ -120,27 +127,30 @@ class HomeTexts extends Page implements HasForms
                             ->label('Descrição')
                             ->required(),
 
-                        TextInput::make('hero_primary_label')
+                        Grid::make()
+                        ->schema([
+                            TextInput::make('hero_primary_label')
                             ->label('Botão primário'),
 
-                        TextInput::make('hero_primary_link')
+                            TextInput::make('hero_primary_link')
                             ->label('Link do botão primário'),
 
-                        TextInput::make('hero_secondary_label')
+                            TextInput::make('hero_secondary_label')
                             ->label('Botão secundário'),
 
-                        TextInput::make('hero_secondary_link')
+                            TextInput::make('hero_secondary_link')
                             ->label('Link do botão secundário'),
+                        ])
                     ]),
 
-                Section::make('Philosophy')
+                Section::make('Filosofia da Empresa')
                     ->schema([
-                        Textarea::make('philosophy_text')
+                        RichEditor::make('philosophy_text')
                             ->label('Texto')
                             ->required(),
                     ]),
 
-                Section::make('Methodology')
+                Section::make('Metodologia')
                     ->schema([
                         TextInput::make('methodology_label')
                             ->label('Label')
@@ -155,24 +165,27 @@ class HomeTexts extends Page implements HasForms
                             ->required(),
                     ]),
 
-                Section::make('Services')
+                Section::make('Serviços')
                     ->schema([
-                        TextInput::make('services_label')
+                        Grid::make()
+                        ->schema([
+                            TextInput::make('services_label')
                             ->label('Label')
                             ->required(),
 
-                        TextInput::make('services_title')
+                            TextInput::make('services_title')
                             ->label('Título')
                             ->required(),
 
-                        TextInput::make('services_link_label')
+                            TextInput::make('services_link_label')
                             ->label('Texto do link'),
 
-                        TextInput::make('services_link_url')
+                            TextInput::make('services_link_url')
                             ->label('URL'),
+                        ])
                     ]),
 
-                Section::make('About')
+                Section::make('Sobre a AAGON')
                     ->schema([
                         TextInput::make('about_label')
                             ->label('Label')
@@ -189,25 +202,29 @@ class HomeTexts extends Page implements HasForms
 
                 Section::make('Visibilidade')
                     ->schema([
-                        Toggle::make('show_philosophy')
-                            ->label('Exibir Philosophy')
-                            ->default(true),
+                        Grid::make()
+                            ->schema([
+                                Toggle::make('show_philosophy')
+                                    ->label('Exibir Filosofia da Empresa')
+                                    ->default(true),
 
-                        Toggle::make('show_methodology')
-                            ->label('Exibir Methodology')
-                            ->default(true),
+                                Toggle::make('show_methodology')
+                                    ->label('Exibir Metodologia')
+                                    ->default(true),
 
-                        Toggle::make('show_services')
-                            ->label('Exibir Services')
-                            ->default(true),
+                                Toggle::make('show_services')
+                                    ->label('Exibir Serviços')
+                                    ->default(true),
 
-                        Toggle::make('show_about')
-                            ->label('Exibir About')
-                            ->default(true),
+                                Toggle::make('show_about')
+                                    ->label('Exibir Sobre a AAGON')
+                                    ->default(true),
 
-                        Toggle::make('show_cta')
-                            ->label('Exibir CTA')
-                            ->default(true),
+                                Toggle::make('show_cta')
+                                    ->label('Exibir CTA')
+                                    ->default(true),
+                            ])
+                            ->columns(2),
                     ]),
             ])
             ->statePath('data');

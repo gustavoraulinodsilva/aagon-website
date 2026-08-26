@@ -29,8 +29,18 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Blue,
             ])
+            ->navigationGroups([
+                'Página Inicial',
+                'Sobre a AAGON',
+                'Serviços',
+                'Projetos',
+                'Time',
+                'Contato',
+                'Configurações',
+            ])
+            ->collapsibleNavigationGroups(true)
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([

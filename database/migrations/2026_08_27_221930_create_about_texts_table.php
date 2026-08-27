@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('philosophy_tag');
             $table->text('philosophy_title');
             $table->text('philosophy_description')->nullable();
+            $table->string('manifest_tag');
             $table->text('manifest_text');
             $table->string('approach_tag');
             $table->text('approach_title');

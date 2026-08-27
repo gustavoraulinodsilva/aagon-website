@@ -17,6 +17,7 @@ class AboutTexts extends Model
         'philosophy_tag',
         'philosophy_title',
         'philosophy_description',
+        'manifest_tag',
         'manifest_text',
         'approach_tag',
         'approach_title',

@@ -7,6 +7,7 @@ use BackedEnum;
 use Filament\Actions\Action;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\RichEditor\ToolbarButtonGroup;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
@@ -27,7 +28,7 @@ class HomeTexts extends Page implements HasForms
     public ?array $data = [];
 
     protected static string | UnitEnum | null $navigationGroup = 'Página Inicial';
-    
+
     protected static ?int $navigationSort = 1;
 
     protected static ?string $navigationLabel = 'Home - Textos';
@@ -120,6 +121,13 @@ class HomeTexts extends Page implements HasForms
                             ->required(),
 
                         RichEditor::make('hero_title')
+                            ->toolbarButtons([
+                                ['bold', 'italic', 'underline', 'strike', 'link'],
+                                [ToolbarButtonGroup::make('Paragraph', ['paragraph', 'h1', 'h2', 'h3'])->textualButtons()],
+                                [ToolbarButtonGroup::make('Alignment', ['alignStart', 'alignCenter', 'alignEnd', 'alignJustify'])],
+                                ['blockquote', 'codeBlock', 'bulletList', 'orderedList'],
+                                ['undo', 'redo'],
+                            ])
                             ->label('Título')
                             ->required(),
 
@@ -128,24 +136,31 @@ class HomeTexts extends Page implements HasForms
                             ->required(),
 
                         Grid::make()
-                        ->schema([
-                            TextInput::make('hero_primary_label')
-                            ->label('Botão primário'),
+                            ->schema([
+                                TextInput::make('hero_primary_label')
+                                    ->label('Botão primário'),
 
-                            TextInput::make('hero_primary_link')
-                            ->label('Link do botão primário'),
+                                TextInput::make('hero_primary_link')
+                                    ->label('Link do botão primário'),
 
-                            TextInput::make('hero_secondary_label')
-                            ->label('Botão secundário'),
+                                TextInput::make('hero_secondary_label')
+                                    ->label('Botão secundário'),
 
-                            TextInput::make('hero_secondary_link')
-                            ->label('Link do botão secundário'),
-                        ])
+                                TextInput::make('hero_secondary_link')
+                                    ->label('Link do botão secundário'),
+                            ])
                     ]),
 
                 Section::make('Filosofia da Empresa')
                     ->schema([
                         RichEditor::make('philosophy_text')
+                            ->toolbarButtons([
+                                ['bold', 'italic', 'underline', 'strike', 'link'],
+                                [ToolbarButtonGroup::make('Paragraph', ['paragraph', 'h1', 'h2', 'h3'])->textualButtons()],
+                                [ToolbarButtonGroup::make('Alignment', ['alignStart', 'alignCenter', 'alignEnd', 'alignJustify'])],
+                                ['blockquote', 'codeBlock', 'bulletList', 'orderedList'],
+                                ['undo', 'redo'],
+                            ])
                             ->label('Texto')
                             ->required(),
                     ]),
@@ -168,21 +183,21 @@ class HomeTexts extends Page implements HasForms
                 Section::make('Serviços')
                     ->schema([
                         Grid::make()
-                        ->schema([
-                            TextInput::make('services_label')
-                            ->label('Label')
-                            ->required(),
+                            ->schema([
+                                TextInput::make('services_label')
+                                    ->label('Label')
+                                    ->required(),
 
-                            TextInput::make('services_title')
-                            ->label('Título')
-                            ->required(),
+                                TextInput::make('services_title')
+                                    ->label('Título')
+                                    ->required(),
 
-                            TextInput::make('services_link_label')
-                            ->label('Texto do link'),
+                                TextInput::make('services_link_label')
+                                    ->label('Texto do link'),
 
-                            TextInput::make('services_link_url')
-                            ->label('URL'),
-                        ])
+                                TextInput::make('services_link_url')
+                                    ->label('URL'),
+                            ])
                     ]),
 
                 Section::make('Sobre a AAGON')

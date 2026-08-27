@@ -4,37 +4,6 @@
 
 @section('content')
     @php
-        $timelineSteps = [
-            [
-                'number' => '01',
-                'title' => 'Mapeamento do Problema',
-                'description' =>
-                    'Desconstruímos desafios organizacionais complexos em requisitos técnicos discretos e executáveis.',
-                'active' => false,
-            ],
-            [
-                'number' => '02',
-                'title' => 'Estratégia Arquitetural',
-                'description' =>
-                    'Desenhamos blueprints resilientes e escaláveis que antecipam futuros vetores de crescimento e carga.',
-                'active' => false,
-            ],
-            [
-                'number' => '03',
-                'title' => 'Engenharia de Precisão',
-                'description' =>
-                    'Executamos o desenvolvimento com rigorosos protocolos de teste e padrões imutáveis de qualidade.',
-                'active' => false,
-            ],
-            [
-                'number' => '04',
-                'title' => 'Implantação de Soluções',
-                'description' =>
-                    'Integração transparente em ambientes operacionais com monitoramento contínuo e acompanhamento.',
-                'active' => true,
-            ],
-        ];
-
         $services = [
             [
                 'title' => 'Software sob medida',
@@ -149,24 +118,23 @@
                             {{ $hometext['methodology_description'] }}
                         </p>
                     </div>
-                    {{-- falta integrar o loop do timelineSteps --}}
                     <div
                         class="col-span-12 md:col-span-6 md:col-start-7 flex flex-col gap-10 border-l border-[#2D2D2D] pl-8 relative">
-                        @foreach ($timelineSteps as $step)
+                        @foreach ($homemethodologysteps as $step)
                             <div class="reveal flex gap-6 items-start relative opacity-0 transition duration-700"
                                 data-reveal data-reveal-delay="{{ 100 + $loop->index * 80 }}">
                                 <div
-                                    class="absolute -left-10.25 top-1.5 w-3 h-3 bg-[#121212] border-2 {{ $step['active'] ? 'border-[#0055FF] shadow-[0_0_10px_rgba(0,85,255,0.5)]' : 'border-[#2D2D2D]' }} rounded-full">
+                                    class="absolute -left-10.25 top-1.5 w-3 h-3 bg-[#121212] border-2 {{ $step['is_active'] ? 'border-[#0055FF] shadow-[0_0_10px_rgba(0,85,255,0.5)]' : 'border-[#2D2D2D]' }} rounded-full">
                                 </div>
 
                                 <span
-                                    class="font-mono text-xs font-medium {{ $step['active'] ? 'text-[#0055FF]' : 'text-[#A1A1AA]' }} mt-1 w-8 shrink-0">
+                                    class="font-mono text-xs font-medium {{ $step['is_active'] ? 'text-[#0055FF]' : 'text-[#A1A1AA]' }} mt-1 w-8 shrink-0">
                                     {{ $step['number'] }}
                                 </span>
 
                                 <div>
                                     <h3
-                                        class="text-xl font-semibold mb-2 {{ $step['active'] ? 'text-[#0055FF]' : 'text-[#F5F5F5]' }}">
+                                        class="text-xl font-semibold mb-2 {{ $step['is_active'] ? 'text-[#0055FF]' : 'text-[#F5F5F5]' }}">
                                         {{ $step['title'] }}
                                     </h3>
                                     <p class="text-sm md:text-base text-[#A1A1AA] leading-relaxed">

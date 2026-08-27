@@ -15,4 +15,9 @@ class HomeMethodologyStep extends Model
         'is_active',
         'order',
     ];
+
+    public function getNumberAttribute($value): string
+    {
+        return str_pad($value, 2, '0', STR_PAD_LEFT);
+    }
 }

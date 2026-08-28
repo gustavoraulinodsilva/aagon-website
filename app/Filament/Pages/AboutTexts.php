@@ -127,14 +127,7 @@ class AboutTexts extends Page implements HasForms
                         TextInput::make('manifest_tag')
                             ->label('Tag do Manifesto')
                             ->required(),
-                        RichEditor::make('manifest_text')
-                            ->toolbarButtons([
-                                ['bold', 'italic', 'underline', 'strike', 'link'],
-                                [ToolbarButtonGroup::make('Paragraph', ['paragraph', 'h1', 'h2', 'h3'])->textualButtons()],
-                                [ToolbarButtonGroup::make('Alignment', ['alignStart', 'alignCenter', 'alignEnd', 'alignJustify'])],
-                                ['blockquote', 'codeBlock', 'bulletList', 'orderedList'],
-                                ['undo', 'redo'],
-                            ])
+                        TextInput::make('manifest_text')
                             ->label('Texto do Manifesto')
                             ->required(),
                     ]),
@@ -149,14 +142,7 @@ class AboutTexts extends Page implements HasForms
                         TextInput::make('approach_tag')
                             ->label('Tag')
                             ->required(),
-                        RichEditor::make('approach_title')
-                            ->toolbarButtons([
-                                ['bold', 'italic', 'underline', 'strike', 'link'],
-                                [ToolbarButtonGroup::make('Paragraph', ['paragraph', 'h1', 'h2', 'h3'])->textualButtons()],
-                                [ToolbarButtonGroup::make('Alignment', ['alignStart', 'alignCenter', 'alignEnd', 'alignJustify'])],
-                                ['blockquote', 'codeBlock', 'bulletList', 'orderedList'],
-                                ['undo', 'redo'],
-                            ])
+                        TextInput::make('approach_title')
                             ->label('Título')
                             ->required(),
                     ]),
@@ -171,14 +157,7 @@ class AboutTexts extends Page implements HasForms
                         TextInput::make('workflow_tag')
                             ->label('Tag')
                             ->required(),
-                        RichEditor::make('workflow_title')
-                            ->toolbarButtons([
-                                ['bold', 'italic', 'underline', 'strike', 'link'],
-                                [ToolbarButtonGroup::make('Paragraph', ['paragraph', 'h1', 'h2', 'h3'])->textualButtons()],
-                                [ToolbarButtonGroup::make('Alignment', ['alignStart', 'alignCenter', 'alignEnd', 'alignJustify'])],
-                                ['blockquote', 'codeBlock', 'bulletList', 'orderedList'],
-                                ['undo', 'redo'],
-                            ])
+                        TextInput::make('workflow_title')
                             ->label('Título')
                             ->required(),
                     ]),
@@ -193,14 +172,7 @@ class AboutTexts extends Page implements HasForms
                         TextInput::make('values_tag')
                             ->label('Tag')
                             ->required(),
-                        RichEditor::make('values_title')
-                            ->toolbarButtons([
-                                ['bold', 'italic', 'underline', 'strike', 'link'],
-                                [ToolbarButtonGroup::make('Paragraph', ['paragraph', 'h1', 'h2', 'h3'])->textualButtons()],
-                                [ToolbarButtonGroup::make('Alignment', ['alignStart', 'alignCenter', 'alignEnd', 'alignJustify'])],
-                                ['blockquote', 'codeBlock', 'bulletList', 'orderedList'],
-                                ['undo', 'redo'],
-                            ])
+                        TextInput::make('values_title')
                             ->label('Título')
                             ->required(),
                     ]),
@@ -215,14 +187,7 @@ class AboutTexts extends Page implements HasForms
                         TextInput::make('metrics_tag')
                             ->label('Tag')
                             ->required(),
-                        RichEditor::make('metrics_title')
-                            ->toolbarButtons([
-                                ['bold', 'italic', 'underline', 'strike', 'link'],
-                                [ToolbarButtonGroup::make('Paragraph', ['paragraph', 'h1', 'h2', 'h3'])->textualButtons()],
-                                [ToolbarButtonGroup::make('Alignment', ['alignStart', 'alignCenter', 'alignEnd', 'alignJustify'])],
-                                ['blockquote', 'codeBlock', 'bulletList', 'orderedList'],
-                                ['undo', 'redo'],
-                            ])
+                        TextInput::make('metrics_title')
                             ->label('Título')
                             ->required(),
                     ]),

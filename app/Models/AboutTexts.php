@@ -31,6 +31,7 @@ class AboutTexts extends Model
         'show_approach',
         'show_workflow',
         'show_values',
-        'show_metrics'
+        'show_metrics',
+        'show_cta',
     ];
 }

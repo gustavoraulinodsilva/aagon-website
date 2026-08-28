@@ -87,14 +87,7 @@ class AboutTexts extends Page implements HasForms
                         TextInput::make('hero_tag')
                                 ->label('Tag')
                                 ->required(),
-                        RichEditor::make('hero_title')
-                            ->toolbarButtons([
-                                ['bold', 'italic', 'underline', 'strike', 'link'],
-                                [ToolbarButtonGroup::make('Paragraph', ['paragraph', 'h1', 'h2', 'h3'])->textualButtons()],
-                                [ToolbarButtonGroup::make('Alignment', ['alignStart', 'alignCenter', 'alignEnd', 'alignJustify'])],
-                                ['blockquote', 'codeBlock', 'bulletList', 'orderedList'],
-                                ['undo', 'redo'],
-                            ])
+                        TextArea::make('hero_title')
                             ->label('Título')
                             ->required(),
                         Textarea::make('hero_description')
@@ -108,6 +101,7 @@ class AboutTexts extends Page implements HasForms
                             ->directory('storage')
                             ->maxSize(5120)
                             ->preserveFilenames()
+                            ->previewable(false)
                             ->required(),
                         TextInput::make('hero_figcaption')
                             ->label('Legenda da imagem')
@@ -123,14 +117,7 @@ class AboutTexts extends Page implements HasForms
                         TextInput::make('philosophy_tag')
                             ->label('Tag')
                             ->required(),
-                        RichEditor::make('philosophy_title')
-                            ->toolbarButtons([
-                                ['bold', 'italic', 'underline', 'strike', 'link'],
-                                [ToolbarButtonGroup::make('Paragraph', ['paragraph', 'h1', 'h2', 'h3'])->textualButtons()],
-                                [ToolbarButtonGroup::make('Alignment', ['alignStart', 'alignCenter', 'alignEnd', 'alignJustify'])],
-                                ['blockquote', 'codeBlock', 'bulletList', 'orderedList'],
-                                ['undo', 'redo'],
-                            ])
+                        TextInput::make('philosophy_title')
                             ->label('Título')
                             ->required(),
                         Textarea::make('philosophy_description')
@@ -237,6 +224,15 @@ class AboutTexts extends Page implements HasForms
                                 ['undo', 'redo'],
                             ])
                             ->label('Título')
+                            ->required(),
+                    ]),
+                    Section::make('Exibir Call to Action')
+                    ->description('Exibir ou ocultar a seção de Call to Action.')
+                    ->schema([
+                        Toggle::make('show_cta')
+                            ->onColor('success')
+                            ->offColor('danger')
+                            ->label('Exibir seção Call to Action')
                             ->required(),
                     ]),
             ])

@@ -15,4 +15,9 @@ class AboutWorkflowStep extends Model
         'order',
         'is_active',
     ];
+
+    public function getStepAttribute(mixed $value): string
+    {
+        return str_pad((string) $value, 2, '0', STR_PAD_LEFT);
+    }
 }

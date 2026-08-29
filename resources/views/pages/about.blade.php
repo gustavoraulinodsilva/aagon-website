@@ -4,25 +4,6 @@
 
 @section('content')
     @php
-
-        $workflowSteps = [
-            [
-                'step' => '01',
-                'title' => 'Diagnóstico',
-                'description' => 'Mapeamos dores, operação e metas para definir o escopo essencial.',
-            ],
-            [
-                'step' => '02',
-                'title' => 'Design da solução',
-                'description' => 'Desenhamos arquitetura, fluxos e prioridades com foco em viabilidade.',
-            ],
-            [
-                'step' => '03',
-                'title' => 'Construção e evolução',
-                'description' => 'Entregamos em etapas com transparência e acompanhamento contínuo.',
-            ],
-        ];
-
         $values = [
             'Clareza na comunicação',
             'Compromisso com qualidade',
@@ -145,7 +126,7 @@
 
                 <div
                     class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-[#2D2D2D] bg-[#1A1A1A] rounded overflow-hidden">
-                    @foreach ($workflowSteps as $step)
+                    @foreach ($aboutworkflowsteps as $step)
                         <article
                             class="reveal p-8 border-b md:border-b-0 md:border-r border-[#2D2D2D] relative group hover:bg-[#242424] transition-colors opacity-0 duration-700"
                             data-reveal data-reveal-delay="{{ 120 + $loop->index * 80 }}">

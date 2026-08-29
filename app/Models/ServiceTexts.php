@@ -22,5 +22,6 @@ class ServiceTexts extends Model
         'show_philosophy',
         'show_catalog',
         'show_lifecycle',
+        'show_cta',
     ];
 }

@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ServiceTexts;
 use Illuminate\Http\Request;
 
 class ServicesController extends Controller
 {
     public function index()
     {
-        return view('pages.services');
+        $servicetexts = ServiceTexts::first()->toArray();
+
+        return view('pages.services', compact('servicetexts'));
     }
 }

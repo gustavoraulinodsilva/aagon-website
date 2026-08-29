@@ -15,4 +15,9 @@ class AboutApproach extends Model
         'order',
         'is_active',
     ];
+
+    public function getNumberAttribute($value): string
+    {
+        return str_pad($value, 2, '0', STR_PAD_LEFT);
+    }
 }

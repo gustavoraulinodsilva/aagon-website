@@ -4,26 +4,6 @@
 
 @section('content')
     @php
-        $approachPillars = [
-            [
-                'number' => '01',
-                'title' => 'Contexto antes de código',
-                'description' =>
-                    'Mergulhamos no processo do cliente para construir soluções com impacto direto de negócio.',
-            ],
-            [
-                'number' => '02',
-                'title' => 'Arquitetura para escala',
-                'description' =>
-                    'Tomamos decisões técnicas pensando na manutenção, segurança e evolução a longo prazo.',
-            ],
-            [
-                'number' => '03',
-                'title' => 'Entrega iterativa',
-                'description' =>
-                    'Priorizamos ciclos curtos com validação constante para reduzir riscos e acelerar resultados.',
-            ],
-        ];
 
         $workflowSteps = [
             [
@@ -131,7 +111,7 @@
 
                 <div
                     class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-[#2D2D2D] bg-[#1A1A1A] rounded overflow-hidden">
-                    @foreach ($approachPillars as $pillar)
+                    @foreach ($aboutapproaches as $pillar)
                         <article
                             class="reveal p-8 border-b md:border-b-0 md:border-r border-[#2D2D2D] relative group hover:bg-[#242424] transition-colors opacity-0 duration-700"
                             data-reveal data-reveal-delay="{{ 100 + $loop->index * 90 }}">

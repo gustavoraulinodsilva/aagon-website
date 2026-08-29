@@ -4,13 +4,6 @@
 
 @section('content')
     @php
-        $values = [
-            'Clareza na comunicação',
-            'Compromisso com qualidade',
-            'Parceria de longo prazo',
-            'Responsabilidade técnica',
-        ];
-
         $numbers = [
             ['value' => 20, 'suffix' => '+', 'label' => 'Projetos entregues'],
             ['value' => 12, 'suffix' => '', 'label' => 'Setores atendidos'],
@@ -157,11 +150,11 @@
 
                     <div class="md:col-span-7">
                         <ul class="grid gap-4 sm:grid-cols-2">
-                            @foreach ($values as $value)
+                            @foreach ($aboutvalues as $value)
                                 <li class="reveal flex items-center rounded border border-[#2D2D2D] bg-[#121212] px-5 py-4 text-sm font-medium text-[#F5F5F5] opacity-0 transition duration-700"
                                     data-reveal data-reveal-delay="{{ 110 + $loop->index * 70 }}">
                                     <span class="mr-3 h-2 w-2 rounded-full bg-[#0055FF]"></span>
-                                    {{ $value }}
+                                    {{ $value['value'] }}
                                 </li>
                             @endforeach
                         </ul>

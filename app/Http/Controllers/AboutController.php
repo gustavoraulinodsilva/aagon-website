@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\AboutApproach;
+use App\Models\AboutMetric;
 use App\Models\AboutTexts;
 use App\Models\AboutValue;
 use App\Models\AboutWorkflowStep;
@@ -16,7 +17,8 @@ class AboutController extends Controller
         $aboutapproaches = AboutApproach::where('is_active', true)->orderBy('order', 'asc')->get();
         $aboutworkflowsteps = AboutWorkflowStep::where('is_active', true)->orderBy('order', 'asc')->get();
         $aboutvalues = AboutValue::where('is_active', true)->orderBy('order', 'asc')->get();
+        $aboutmetrics = AboutMetric::where('is_active', true)->orderBy('order', 'asc')->get();
 
-        return view('pages.about', compact('abouttext', 'aboutapproaches', 'aboutworkflowsteps', 'aboutvalues'));
+        return view('pages.about', compact('abouttext', 'aboutapproaches', 'aboutworkflowsteps', 'aboutvalues', 'aboutmetrics'));
     }
 }

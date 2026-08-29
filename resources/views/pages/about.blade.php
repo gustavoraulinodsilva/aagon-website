@@ -3,15 +3,6 @@
 @section('title', 'Aagon — Tecnologia que transforma')
 
 @section('content')
-    @php
-        $numbers = [
-            ['value' => 20, 'suffix' => '+', 'label' => 'Projetos entregues'],
-            ['value' => 12, 'suffix' => '', 'label' => 'Setores atendidos'],
-            ['value' => 8, 'suffix' => '', 'label' => 'Anos de experiência'],
-            ['value' => 95, 'suffix' => '%', 'label' => 'Clientes recorrentes'],
-        ];
-    @endphp
-
     <div class="bg-[#121212] text-[#F5F5F5] pb-24 pt-28 md:pt-36" data-about-page>
         <section class="mx-auto max-w-360 px-6 md:px-16">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12 items-end">
@@ -176,14 +167,14 @@
                 </div>
 
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                    @foreach ($numbers as $item)
+                    @foreach ($aboutmetrics as $metric)
                         <article
                             class="reveal rounded border border-[#2D2D2D] bg-[#1A1A1A] p-8 text-center opacity-0 transition duration-700"
                             data-reveal data-reveal-delay="{{ 120 + $loop->index * 80 }}">
                             <p class="text-4xl md:text-5xl font-bold font-mono text-[#0055FF]">
-                                <span data-counter="{{ $item['value'] }}">0</span>{{ $item['suffix'] }}
+                                <span data-counter="{{ $metric['value'] }}">0</span>{{ $metric['suffix'] }}
                             </p>
-                            <p class="mt-3 font-mono text-xs uppercase tracking-wider text-[#A1A1AA]">{{ $item['label'] }}
+                            <p class="mt-3 font-mono text-xs uppercase tracking-wider text-[#A1A1AA]">{{ $metric['label'] }}
                             </p>
                         </article>
                     @endforeach

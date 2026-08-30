@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Service extends Model
 {
@@ -43,13 +44,13 @@ class Service extends Model
         return str_pad((string) $value, 2, '0', STR_PAD_LEFT);
     }
 
-    public function capabilities()
+    public function capabilities(): HasMany
     {
         return $this->hasMany(ServiceCapabilities::class, 'service_id', 'id')->orderBy('order');
     }
 
-    public function methodologySteps()
+    public function methodologySteps(): HasMany
     {
-        return $this->hasMany(ServiceMethodologyStep::class, 'service_id', 'id')->orderBy('order');
+        return $this->hasMany(ServiceLifecycleStep::class, 'service_id', 'id')->orderBy('order');
     }
 }

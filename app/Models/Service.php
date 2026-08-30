@@ -51,6 +51,6 @@ class Service extends Model
 
     public function methodologySteps(): HasMany
     {
-        return $this->hasMany(ServiceLifecycleStep::class, 'service_id', 'id')->orderBy('order');
+        return $this->hasMany(ServiceMethodologyStep::class, 'service_id', 'id')->orderBy('order');
     }
 }

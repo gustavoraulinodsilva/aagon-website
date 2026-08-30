@@ -224,13 +224,13 @@
 
             <div
                 class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0 border border-[#2D2D2D] bg-[#1A1A1A] rounded overflow-hidden">
-                @foreach ($methodologySteps as $step)
+                @foreach ($methodologySteps as $mstep)
                     <article
                         class="reveal p-6 border-b sm:border-b-0 border-[#2D2D2D] lg:border-r relative group hover:bg-[#242424] transition-colors opacity-0 duration-700"
                         data-reveal data-reveal-delay="{{ 100 + $loop->index * 60 }}">
-                        <span class="font-mono text-xs font-bold text-[#0055FF]">{{ $step['number'] }}</span>
-                        <h3 class="mt-3 text-lg font-semibold text-[#F5F5F5]">{{ $step['title'] }}</h3>
-                        <p class="mt-2 text-xs text-[#A1A1AA] leading-relaxed">{{ $step['description'] }}</p>
+                        <span class="font-mono text-xs font-bold text-[#0055FF]">{{ $mstep['number'] }}</span>
+                        <h3 class="mt-3 text-lg font-semibold text-[#F5F5F5]">{{ $mstep['title'] }}</h3>
+                        <p class="mt-2 text-xs text-[#A1A1AA] leading-relaxed">{{ $mstep['description'] }}</p>
                     </article>
                 @endforeach
             </div>

@@ -3,43 +3,6 @@
 @section('title', 'Aagon — Serviços')
 
 @section('content')
-    @php
-        $services = [
-            [
-                'number' => '01',
-                'title' => 'Software sob medida',
-                'slug' => 'noticia-2',
-                'description' =>
-                    'Aplicações web e corporativas desenhadas para o contexto real da sua operação, com foco em arquitetura limpa, performance e escalabilidade.',
-                'icon' => 'code_blocks',
-            ],
-            [
-                'number' => '02',
-                'title' => 'Modernização de sistemas',
-                'slug' => 'noticia-2',
-                'description' =>
-                    'Evolução e refatoração estratégica de softwares legados para arquiteturas modernas e seguras, eliminando gargalos e débitos técnicos.',
-                'icon' => 'architecture',
-            ],
-            [
-                'number' => '03',
-                'title' => 'Automação & Integração',
-                'description' =>
-                    'Conexão transparente entre ERPs, CRMs, APIs e microsserviços para eliminar processos manuais e unificar sua operação.',
-                'slug' => 'noticia-2',
-                'icon' => 'account_tree',
-            ],
-            [
-                'number' => '04',
-                'title' => 'Dados & Analytics',
-                'slug' => 'noticia-2',
-                'description' =>
-                    'Construção de pipelines de dados, dashboards e camadas analíticas para transformar métricas operacionais em decisões de negócio.',
-                'icon' => 'insights',
-            ],
-        ];
-    @endphp
-
     <div class="bg-[#121212] text-[#F5F5F5] pb-24 pt-28 md:pt-36">
         <section class="mx-auto max-w-360 px-6 md:px-16">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center border-b border-[#2D2D2D] pb-16">

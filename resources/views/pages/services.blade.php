@@ -38,30 +38,6 @@
                 'icon' => 'insights',
             ],
         ];
-
-        $lifecycleSteps = [
-            [
-                'number' => '01',
-                'title' => 'Diagnóstico',
-                'description' =>
-                    'Mapeamento de gargalos operacionais, requisitos e auditoria técnica de infraestrutura.',
-            ],
-            [
-                'number' => '02',
-                'title' => 'Arquitetura',
-                'description' => 'Definição de contratos de API, modelagem de banco de dados e blueprint da solução.',
-            ],
-            [
-                'number' => '03',
-                'title' => 'Engenharia',
-                'description' => 'Desenvolvimento em ciclos curtos (Agile), com pipelines de CI/CD e rigorosos testes.',
-            ],
-            [
-                'number' => '04',
-                'title' => 'Evolução',
-                'description' => 'Implantação contínua, monitoramento em tempo real e escalabilidade adaptativa.',
-            ],
-        ];
     @endphp
 
     <div class="bg-[#121212] text-[#F5F5F5] pb-24 pt-28 md:pt-36">
@@ -196,7 +172,7 @@
                 </div>
                 <div
                     class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-[#2D2D2D] bg-[#1A1A1A] rounded overflow-hidden">
-                    @foreach ($lifecycleSteps as $step)
+                    @foreach ($lifecyclesteps as $step)
                         <article
                             class="reveal p-8 border-b sm:border-b-0 border-[#2D2D2D] sm:nth-[1]:border-r sm:nth-[3]:border-r lg:nth-[2]:border-r relative group hover:bg-[#242424] transition-colors opacity-0 duration-700"
                             data-reveal data-reveal-delay="{{ 100 + $loop->index * 70 }}">

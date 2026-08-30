@@ -15,4 +15,9 @@ class ServiceLifecycleStep extends Model
         'order',
         'is_active',
     ];
+
+    public function getNumberAttribute(mixed $value): string
+    {
+        return str_pad((string) $value, 2, '0', STR_PAD_LEFT);
+    }
 }

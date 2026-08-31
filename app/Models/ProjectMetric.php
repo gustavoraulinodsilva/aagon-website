@@ -9,9 +9,12 @@ class ProjectMetric extends Model
     protected $table = 'project_metrics';
 
     protected $fillable = [
-        'name',
-        'value',
         'project_id',
+        'prefix',
+        'value',
+        'suffix',
+        'label',
+        'order,'
     ];
 
     public function project()

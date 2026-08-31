@@ -59,7 +59,7 @@ class Project extends Model
         return $this->hasMany(ProjectMetric::class, 'project_id', 'id')->orderBy('order');
     }
 
-    public function gallery()
+    public function galleries()
     {
         return $this->hasMany(ProjectGallery::class, 'project_id', 'id')->orderBy('order');
     }

@@ -86,12 +86,17 @@
             </div>
             <div class="reveal flex flex-wrap items-center gap-3 pt-8 opacity-0 transition duration-700" data-reveal
                 data-reveal-delay="220">
-                <span
-                    class="font-mono text-xs text-[#A1A1AA] uppercase tracking-widest mr-3">{{ $projecttext['category_tag'] }}</span>
-                @foreach ($categories as $cat)
-                    <button
-                        class="font-mono text-xs uppercase tracking-wider px-4 py-2 rounded transition-colors {{ $cat['active'] ? 'bg-[#1A1A1A] border border-[#0055FF] text-[#F5F5F5]' : 'bg-transparent border border-[#2D2D2D] text-[#A1A1AA] hover:border-[#0055FF]/50 hover:text-[#F5F5F5]' }}">
-                        {{ $cat['label'] }}
+                <span class="font-mono text-xs text-[#A1A1AA] uppercase tracking-widest mr-3">
+                    {{ $projecttext['category_tag']}}
+                </span>
+                <button type="button" data-filter="all"
+                    class="font-mono text-xs uppercase tracking-wider px-4 py-2 rounded transition-colors bg-[#1A1A1A] border border-[#0055FF] text-[#F5F5F5]">
+                    Todos
+                </button>
+                @foreach ($projectcategories as $cat)
+                    <button type="button" data-filter="{{ $cat['id'] }}"
+                        class="font-mono text-xs uppercase tracking-wider px-4 py-2 rounded transition-colors bg-transparent border border-[#2D2D2D] text-[#A1A1AA] hover:border-[#0055FF]/50 hover:text-[#F5F5F5]">
+                        {{ $cat['name'] }}
                     </button>
                 @endforeach
             </div>

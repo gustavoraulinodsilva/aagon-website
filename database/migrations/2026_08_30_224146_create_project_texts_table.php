@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('hero_tag');
             $table->text('hero_title');
             $table->text('hero_description');
+            $table->string('category_tag');
             $table->boolean('show_cta')->default(true);
             $table->timestamps();
         });

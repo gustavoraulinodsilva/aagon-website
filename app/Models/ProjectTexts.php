@@ -12,6 +12,7 @@ class ProjectTexts extends Model
         'hero_tag',
         'hero_title',
         'hero_description',
+        'category_tag',
         'show_cta',
     ];
 }

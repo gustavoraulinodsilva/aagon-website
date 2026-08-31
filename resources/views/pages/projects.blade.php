@@ -50,10 +50,9 @@
                 $featuredProject = collect($projects)->firstWhere('is_featured', true) ?? $projects[0];
                 $remainingProjects = collect($projects)->reject(fn($p) => $p['id'] === $featuredProject['id']);
             @endphp
-
-            <!-- CARD DESTAQUE (HERO) -->
             <section class="mx-auto mt-16 max-w-360 px-6 md:px-16">
                 <article
+                    data-category="{{ $featuredProject['category']['id'] ?? '' }}" 
                     class="reveal group relative overflow-hidden rounded border border-[#2D2D2D] bg-[#1A1A1A] transition-colors hover:border-[#0055FF]/50 opacity-0 duration-700 grid grid-cols-1 lg:grid-cols-12"
                     data-reveal data-reveal-delay="240">
                     <div
@@ -96,13 +95,11 @@
                     </div>
                 </article>
             </section>
-
-            <!-- GRID DOS DEMAIS PROJETOS -->
             <section class="mx-auto mt-16 max-w-360 px-6 md:px-16">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     @foreach ($remainingProjects as $index => $project)
                         <article
-                            class="reveal group flex flex-col justify-between overflow-hidden rounded border border-[#2D2D2D] bg-[#1A1A1A] transition-colors hover:border-[#0055FF]/50 opacity-0 duration-700"
+                            data-category="{{ $project['category']['id'] ?? '' }}" class="reveal group flex flex-col justify-between overflow-hidden rounded border border-[#2D2D2D] bg-[#1A1A1A] transition-colors hover:border-[#0055FF]/50 opacity-0 duration-700"
                             data-reveal data-reveal-delay="{{ 100 + $index * 80 }}">
                             <div>
                                 <div class="h-48 w-full border-b border-[#2D2D2D] overflow-hidden bg-[#121212] relative">

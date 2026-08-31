@@ -53,4 +53,9 @@ class Service extends Model
     {
         return $this->hasMany(ServiceMethodologyStep::class, 'service_id', 'id')->orderBy('order');
     }
+
+    public function projects(): HasMany
+    {
+        return $this->hasMany(Project::class, 'service_id', 'id')->orderBy('order');
+    }
 }

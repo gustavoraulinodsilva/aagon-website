@@ -4,14 +4,6 @@
 
 @section('content')
     @php
-        $categories = [
-            ['label' => 'Todos', 'filter' => 'all', 'active' => true],
-            ['label' => 'Educação', 'filter' => 'education', 'active' => false],
-            ['label' => 'Logística', 'filter' => 'logistics', 'active' => false],
-            ['label' => 'Indústria', 'filter' => 'manufacturing', 'active' => false],
-            ['label' => 'Tecnologia', 'filter' => 'tech', 'active' => false],
-        ];
-
         $projects = [
             [
                 'number' => '01',

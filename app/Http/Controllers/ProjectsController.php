@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ProjectTexts;
 use Illuminate\Http\Request;
 
 class ProjectsController extends Controller
 {
     public function index()
     {
-        return view('pages.projects');
+        $projecttext = ProjectTexts::first()->toArray();
+
+        return view('pages.projects', compact('projecttext'));
     }
 }

@@ -3,7 +3,6 @@
 @section('title', 'Aagon — Contato')
 
 @section('content')
-    @dd($contacttext)
     <div class="bg-[#121212] text-[#F5F5F5] pb-24 pt-28 md:pt-36">
         <section class="mx-auto max-w-360 px-6 md:px-16">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end border-b border-[#2D2D2D] pb-16">

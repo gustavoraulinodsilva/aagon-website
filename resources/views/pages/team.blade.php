@@ -3,55 +3,6 @@
 @section('title', 'Aagon — Equipe')
 
 @section('content')
-    @php
-        $teamMembers = [
-            [
-                'number' => '01',
-                'name' => 'Gustavo Raulino da Silva',
-                'role' => 'Engenheiro de Software & Fundador',
-                'bio' =>
-                    'Focado em arquiteturas escaláveis, desenvolvimento full-stack com Laravel, Next.js e engenharia de sistemas com rigor técnico.',
-                'linkedin' => 'https://linkedin.com',
-                'avatar' => asset('images/aboutimageaagon.jpeg'),
-            ],
-            [
-                'number' => '02',
-                'name' => 'Ana Costa',
-                'role' => 'Tech Lead & Arquiteta de Soluções',
-                'bio' =>
-                    'Especialista em infraestrutura cloud-native, microsserviços e modelagem de bancos de dados para alta volumetria.',
-                'linkedin' => 'https://linkedin.com',
-                'avatar' => asset('images/aboutimageaagon.jpeg'),
-            ],
-            [
-                'number' => '03',
-                'name' => 'Carlos Souza',
-                'role' => 'Desenvolvedor Backend Senior',
-                'bio' =>
-                    'Atua no desenho de APIs de alta performance, integração de sistemas complexos e otimização de rotinas de banco de dados.',
-                'linkedin' => 'https://linkedin.com',
-                'avatar' => asset('images/aboutimageaagon.jpeg'),
-            ],
-            [
-                'number' => '04',
-                'name' => 'Marina Alves',
-                'role' => 'Product Designer & UX Specialist',
-                'bio' =>
-                    'Conecta objetivos de negócio e requisitos técnicos a interfaces funcionais, enxutas e focadas na usabilidade operacional.',
-                'linkedin' => 'https://linkedin.com',
-                'avatar' => asset('images/aboutimageaagon.jpeg'),
-            ],
-            [
-                'number' => '05',
-                'name' => 'Rafael Martins',
-                'role' => 'Engenheiro de Dados & DevOps',
-                'bio' =>
-                    'Responsável por automação de pipelines de CI/CD, segurança da informação e construção de infraestrutura resiliente.',
-                'linkedin' => 'https://linkedin.com',
-                'avatar' => asset('images/aboutimageaagon.jpeg'),
-            ],
-        ];
-    @endphp
     <div class="bg-[#121212] text-[#F5F5F5] pb-24 pt-28 md:pt-36">
         <section class="mx-auto max-w-360 px-6 md:px-16">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end border-b border-[#2D2D2D] pb-16">
@@ -111,7 +62,7 @@
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    @foreach ($teamMembers as $index => $member)
+                    @foreach ($team as $index => $member)
                         <article
                             class="reveal group flex flex-col justify-between rounded border border-[#2D2D2D] bg-[#1A1A1A] p-8 text-center transition-colors hover:border-[#0055FF]/50 opacity-0 duration-700"
                             data-reveal data-reveal-delay="{{ 100 + $index * 70 }}">
@@ -123,7 +74,7 @@
 
                                 <div
                                     class="mx-auto relative h-28 w-28 overflow-hidden rounded-full border-2 border-[#2D2D2D] bg-[#121212] group-hover:border-[#0055FF] transition-all duration-300">
-                                    <img src="{{ $member['avatar'] }}" alt="{{ $member['name'] }}"
+                                    <img src="{{ asset('storage/' . $member['image']) }}" alt="{{ $member['name'] }}"
                                         class="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                                         loading="lazy">
                                 </div>

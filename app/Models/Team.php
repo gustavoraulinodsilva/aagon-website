@@ -17,4 +17,9 @@ class Team extends Model
         'number',
         'order'
     ];
+
+    public function getNumberAttribute( mixed $value): string
+    {
+        return str_pad($value, 2, '0', STR_PAD_LEFT);
+    }
 }

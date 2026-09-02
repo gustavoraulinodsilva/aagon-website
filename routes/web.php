@@ -18,3 +18,4 @@ Route::get('/projetos', [ProjectsController::class, 'index'])->name('projects');
 Route::get('/projetos/{slug}', [ProjectsDetailsController::class, 'index'])->name('projects.details');
 Route::get('/equipe', [TeamController::class, 'index'])->name('team');
 Route::get('/contato', [ContactController::class, 'index'])->name('contact');
+Route::post('/contato', [ContactController::class, 'store'])->name('contact.store');

@@ -1,6 +1,7 @@
 import './pages/home';
 import './pages/about';
 import './pages/projects';
+import './pages/contact';
 
 function init() {
     initHeader();

@@ -119,11 +119,11 @@
                                 class="w-full rounded border border-[#2D2D2D] bg-[#121212] px-4 py-3 font-mono text-sm text-[#F5F5F5] transition focus:border-[#0055FF] focus:outline-none focus:ring-1 focus:ring-[#0055FF]">
                                 <option value="" disabled selected class="text-[#52525B]">Selecione o tipo de assunto
                                 </option>
-                                <option value="software">Software Sob Medida</option>
-                                <option value="modernization">Modernização de Sistemas</option>
-                                <option value="automation">Automação & Integração</option>
-                                <option value="data">Dados & Analytics</option>
-                                <option value="other">Outro Assunto</option>
+                                <option value="software-sob-medida">Software Sob Medida</option>
+                                <option value="modernizacao-de-sistemas">Modernização de Sistemas</option>
+                                <option value="automacao-e-integracao">Automação & Integração</option>
+                                <option value="dados-e-analytics">Dados & Analytics</option>
+                                <option value="outro-assunto">Outro Assunto</option>
                             </select>
                         </div>
 

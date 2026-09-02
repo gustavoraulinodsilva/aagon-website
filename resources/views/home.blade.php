@@ -218,24 +218,6 @@
         </section>
     @endif
     @if ($hometext['show_cta'] == true)
-        <section class="py-24 bg-[#121212] border-t border-[#2D2D2D]">
-        <div class="max-w-360 mx-auto px-6 md:px-16">
-            <div class="reveal p-10 md:p-16 bg-[#1A1A1A] border border-[#2D2D2D] rounded flex flex-col md:flex-row items-start md:items-center justify-between gap-8 opacity-0 transition duration-700"
-                data-reveal>
-                <div class="space-y-3 max-w-2xl">
-                    <p class="font-mono text-xs uppercase tracking-widest text-[#0055FF]">Tem um desafio?</p>
-                    <h2 class="text-3xl md:text-5xl font-semibold tracking-tight text-[#F5F5F5]">Vamos conversar.</h2>
-                    <p class="text-sm md:text-base text-[#A1A1AA] leading-relaxed">
-                        Construímos junto com seu time a próxima etapa digital da empresa, com foco em impacto de negócio e
-                        evolução contínua.
-                    </p>
-                </div>
-                <a href="{{ route('contact') }}"
-                    class="px-8 py-4 bg-[#0055FF] text-white rounded font-mono text-xs uppercase tracking-wider font-medium hover:bg-opacity-90 transition-all shrink-0">
-                    Iniciar um Projeto
-                </a>
-            </div>
-        </div>
-    </section>
+        @include('components.cta')
     @endif
 @endsection

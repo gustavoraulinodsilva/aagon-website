@@ -187,8 +187,6 @@
                 </div>
             </section>
         @endif
-
-        <!-- Projeto Relacionado -->
         <section class="mx-auto mt-28 max-w-360 px-6 md:px-16">
             <div class="mb-8 space-y-3">
                 <p class="reveal font-mono text-xs uppercase tracking-widest text-[#0055FF] opacity-0 transition duration-700" data-reveal>
@@ -216,23 +214,6 @@
                 </div>
             </article>
         </section>
-
-        <!-- CTA Final -->
-        <section class="mx-auto mt-28 max-w-360 px-6 md:px-16">
-            <div class="reveal p-10 md:p-16 border border-[#2D2D2D] bg-[#1A1A1A] rounded flex flex-col md:flex-row items-start md:items-center justify-between gap-8 opacity-0 transition duration-700"
-                data-reveal>
-                <div class="space-y-3 max-w-2xl">
-                    <p class="font-mono text-xs uppercase tracking-widest text-[#0055FF]">Inicie sua plataforma</p>
-                    <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-[#F5F5F5]">Tem um sistema em mente?</h2>
-                    <p class="text-sm md:text-base text-[#A1A1AA] leading-relaxed">
-                        Fale com nosso time de engenharia para validar suas ideias e desenhar a melhor estratégia técnica.
-                    </p>
-                </div>
-                <a href="{{ route('contact') }}"
-                    class="px-8 py-4 bg-[#0055FF] text-white rounded font-mono text-xs font-medium uppercase tracking-wider hover:bg-opacity-90 transition-all shrink-0">
-                    Converse com a Aagon
-                </a>
-            </div>
-        </section>
+        @include('components.cta')
     </div>
 @endsection

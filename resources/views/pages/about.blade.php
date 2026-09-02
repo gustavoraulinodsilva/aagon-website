@@ -174,7 +174,8 @@
                             <p class="text-4xl md:text-5xl font-bold font-mono text-[#0055FF]">
                                 <span data-counter="{{ $metric['value'] }}">0</span>{{ $metric['suffix'] }}
                             </p>
-                            <p class="mt-3 font-mono text-xs uppercase tracking-wider text-[#A1A1AA]">{{ $metric['label'] }}
+                            <p class="mt-3 font-mono text-xs uppercase tracking-wider text-[#A1A1AA]">
+                                {{ $metric['label'] }}
                             </p>
                         </article>
                     @endforeach
@@ -182,23 +183,7 @@
             </section>
         @endif
         @if ($abouttext['show_cta'])
-            <section class="mx-auto mt-28 max-w-360 px-6 md:px-16 text-center">
-                <div
-                    class="p-12 md:p-16 border border-[#2D2D2D] bg-[#1A1A1A] rounded flex flex-col items-center justify-center space-y-6">
-                    <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-[#F5F5F5]">Pronto para construir?</h2>
-                    <p class="text-base text-[#A1A1AA] max-w-xl">
-                        Vamos conversar sobre os desafios da sua empresa e como desenhar a melhor solução digital.
-                    </p>
-                    <a href="{{ route('contact') }}"
-                        class="inline-flex items-center gap-2 bg-[#0055FF] text-white px-8 py-4 rounded font-mono text-xs font-medium uppercase tracking-wider hover:bg-opacity-90 transition-all">
-                        <span>Iniciar uma conversa</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </a>
-                </div>
-            </section>
+            @include('components.cta')
         @endif
 
     </div>

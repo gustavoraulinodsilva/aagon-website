@@ -3,23 +3,28 @@
 @section('title', 'Aagon — Contato')
 
 @section('content')
+    @dd($contacttext)
     <div class="bg-[#121212] text-[#F5F5F5] pb-24 pt-28 md:pt-36">
         <section class="mx-auto max-w-360 px-6 md:px-16">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end border-b border-[#2D2D2D] pb-16">
                 <div class="md:col-span-8 space-y-6">
                     <p class="reveal font-mono text-xs font-medium uppercase tracking-widest text-[#0055FF] opacity-0 transition duration-700"
                         data-reveal>
-                        Contato
+                        {{ $contacttext['hero_tag'] }}
                     </p>
                     <h1 class="reveal border-l-4 border-[#0055FF] pl-6 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#F5F5F5] leading-tight opacity-0 transition duration-700"
                         data-reveal data-reveal-delay="100">
-                        Vamos conversar sobre seu <span class="text-[#0055FF]">próximo desafio.</span>
+                        {!! str_replace(
+                            ['<h1>', '</h1>', '<strong>', '</strong>'],
+                            ['', '', '<span class="text-[#0055FF]">', '</span>'],
+                            $contacttext['hero_title'] ?? '',
+                        ) !!}
                     </h1>
                 </div>
                 <div class="md:col-span-4">
                     <p class="reveal text-base md:text-lg text-[#A1A1AA] leading-relaxed opacity-0 transition duration-700"
                         data-reveal data-reveal-delay="180">
-                        Preencha o formulário abaixo ou utilize nossos canais diretos para avaliar seu cenário técnico com nosso time de engenharia.
+                        {{ $contacttext['hero_description'] }}
                     </p>
                 </div>
             </div>
@@ -28,10 +33,10 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 <div class="lg:col-span-5 space-y-8 rounded border border-[#2D2D2D] bg-[#1A1A1A] p-8 md:p-10">
                     <div class="space-y-3">
-                        <p class="font-mono text-xs font-semibold uppercase tracking-widest text-[#0055FF]">Atendimento Direto</p>
-                        <h2 class="text-2xl font-bold text-[#F5F5F5] md:text-3xl">Canais de acesso rápido</h2>
+                        <p class="font-mono text-xs font-semibold uppercase tracking-widest text-[#0055FF]">{{ $contacttext['service_tag'] }}</p>
+                        <h2 class="text-2xl font-bold text-[#F5F5F5] md:text-3xl">{{ $contacttext['service_title'] }}</h2>
                         <p class="text-sm leading-relaxed text-[#A1A1AA]">
-                            Se preferir um contato mais direto, estamos disponíveis via e-mail e nos canais corporativos abaixo.
+                            {{ $contacttext['service_description'] }}
                         </p>
                     </div>
 
@@ -50,14 +55,14 @@
 
                         <div class="group border-l-2 border-[#2D2D2D] pl-4 hover:border-[#0055FF] transition-colors">
                             <span class="font-mono text-[11px] uppercase tracking-widest text-[#0055FF] block mb-1">Horário de operação</span>
-                            <p class="font-mono text-sm text-[#A1A1AA]">Segunda a Sexta, das 08h às 18h</p>
+                            <p class="font-mono text-sm text-[#A1A1AA]">{{ $contacttext['business_hours'] }}</p>
                         </div>
 
                         <div class="group border-l-2 border-[#2D2D2D] pl-4 hover:border-[#0055FF] transition-colors">
                             <span class="font-mono text-[11px] uppercase tracking-widest text-[#0055FF] block mb-1">Disponibilidade</span>
                             <div class="flex items-center space-x-2 mt-1">
                                 <span class="h-2 w-2 rounded-full bg-[#0055FF] animate-pulse"></span>
-                                <span class="font-mono text-xs text-[#F5F5F5]">Aceitando novos projetos</span>
+                                <span class="font-mono text-xs text-[#F5F5F5]">{{ $contacttext['availability'] }}</span>
                             </div>
                         </div>
                     </div>

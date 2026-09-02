@@ -46,14 +46,14 @@
                                 corporativo</span>
                             <a href="mailto:contato@aagon.dev"
                                 class="font-mono text-base font-medium text-[#F5F5F5] hover:text-[#0055FF] transition-colors">
-                                contato@aagon.dev
+                                {{ $general['email'] }}
                             </a>
                         </div>
 
                         <div class="group border-l-2 border-[#2D2D2D] pl-4 hover:border-[#0055FF] transition-colors">
                             <span
                                 class="font-mono text-[11px] uppercase tracking-widest text-[#0055FF] block mb-1">Localização</span>
-                            <p class="font-mono text-sm text-[#F5F5F5]">Caxias do Sul, RS — Brasil</p>
+                            <p class="font-mono text-sm text-[#F5F5F5]">{{ $general['location'] }}</p>
                         </div>
 
                         <div class="group border-l-2 border-[#2D2D2D] pl-4 hover:border-[#0055FF] transition-colors">

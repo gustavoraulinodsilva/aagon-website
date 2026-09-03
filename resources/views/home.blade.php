@@ -191,6 +191,6 @@
         </section>
     @endif
     @if ($hometext['show_cta'] == true)
-        @include('components.cta')
+        @include('components.cta', ['cta_section_class' => 'bg-[#121212]'])
     @endif
 @endsection

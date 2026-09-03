@@ -1,4 +1,4 @@
-<section class="py-24 bg-[#121212] border-t border-[#2D2D2D]">
+<section class="{{ $cta_section_class ?? 'bg-transparent' }} py-24">
     <div class="max-w-360 mx-auto px-6 md:px-16">
         <div class="reveal p-10 md:p-16 bg-[#1A1A1A] border border-[#2D2D2D] rounded flex flex-col md:flex-row items-start md:items-center justify-between gap-8 opacity-0 transition duration-700"
             data-reveal>

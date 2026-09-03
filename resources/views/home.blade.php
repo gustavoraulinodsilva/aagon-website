@@ -3,32 +3,6 @@
 @section('title', 'AAGON — Technology & Digital Engineering')
 
 @section('content')
-    @php
-        $services = [
-            [
-                'title' => 'Software sob medida',
-                'desc' => 'Sistemas e plataformas web desenhadas para o contexto real da sua operação.',
-            ],
-            [
-                'title' => 'Modernização de sistemas',
-                'desc' => 'Evolução e refatoração de softwares legados para arquiteturas escaláveis.',
-            ],
-            [
-                'title' => 'Automação & Integração',
-                'desc' => 'Conexão entre ERPs, CRMs e serviços para criar uma operação unificada.',
-            ],
-            [
-                'title' => 'Dados & Analytics',
-                'desc' => 'Dashboards e camadas de dados para transformar informação em decisão.',
-            ],
-        ];
-
-        $stats = [
-            ['value' => '20+', 'label' => 'Projetos entregues'],
-            ['value' => '12', 'label' => 'Setores atendidos'],
-            ['value' => '8', 'label' => 'Anos de experiência'],
-        ];
-    @endphp
     <section
         class="relative min-h-screen flex items-center border-b border-[#2D2D2D] overflow-hidden -mt-20 pt-20 md:-mt-24 md:pt-24 bg-[#121212]">
         @php
@@ -178,7 +152,7 @@
                             data-reveal data-reveal-delay="{{ 80 + $loop->index * 80 }}">
                             <h3 class="text-lg font-semibold text-[#F5F5F5] group-hover:text-[#0055FF] transition-colors">
                                 {{ $service['title'] }}</h3>
-                            <p class="mt-3 text-sm text-[#A1A1AA] leading-relaxed">{{ $service['desc'] }}</p>
+                            <p class="mt-3 text-sm text-[#A1A1AA] leading-relaxed">{{ $service['description'] }}</p>
                         </article>
                     @endforeach
                 </div>
@@ -202,14 +176,13 @@
                         {{ $hometext['about_description'] }}
                     </p>
                 </div>
-                {{-- Falta integrar os números, provavelmente tratei do sobre aagon --}}
                 <div class="md:col-span-5 grid grid-cols-3 gap-4">
-                    @foreach ($stats as $stat)
+                    @foreach ($metrics as $metric)
                         <div class="reveal p-5 bg-[#1A1A1A] border border-[#2D2D2D] rounded text-center opacity-0 transition duration-700"
                             data-reveal data-reveal-delay="{{ 120 + $loop->index * 90 }}">
-                            <p class="text-2xl md:text-3xl font-bold font-mono text-[#0055FF]">{{ $stat['value'] }}</p>
+                            <p class="text-2xl md:text-3xl font-bold font-mono text-[#0055FF]">{{ $metric['value'] }}</p>
                             <p class="mt-2 font-mono text-[10px] uppercase tracking-wider text-[#A1A1AA]">
-                                {{ $stat['label'] }}
+                                {{ $metric['label'] }}
                             </p>
                         </div>
                     @endforeach
